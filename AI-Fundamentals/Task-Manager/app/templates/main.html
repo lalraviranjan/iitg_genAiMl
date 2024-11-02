@@ -1,0 +1,14 @@
+<!-- main.html -->
+<h2>Welcome {{ username }}</h2>
+<ul>
+    {% for task in tasks %}
+    <li>{{ task.description }} - {{ task.status }}
+        <!-- <button onclick="completeTask({{ task.id }})">✓</button>
+        <button onclick="deleteTask({{ task.id }})">🗑</button> -->
+    </li>
+    {% endfor %}
+</ul>
+<form action="{{ url_for('add_task') }}" method="post">
+    <input type="text" name="description" placeholder="Add new task">
+    <input type="submit" value="Add Task">
+</form>
