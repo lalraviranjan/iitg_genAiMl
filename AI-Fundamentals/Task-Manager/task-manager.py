@@ -13,9 +13,9 @@ def connect_db():
     return conn, cursor
 
 # %%
-conn, cursor = connect_db()
-df = pd.read_sql_query("SELECT * from users", conn)
-print(df.to_string(index=False))
+# conn, cursor = connect_db()
+# df = pd.read_sql_query("SELECT * from users", conn)
+# print(df.to_string(index=False))
 
 # %%
 def is_user_registered(type, username):
@@ -38,26 +38,29 @@ def register_user():
     while True:
         user_name = input("Enter username (or Type 'exit' to quit): ")
         if user_name.lower() == 'exit':
+            conn.close()
             return "exit"
-        elif is_user_registered('register', user_name):
+        
+        if is_user_registered('register', user_name):
             print("\nUsername already exists. Please try a different username.")
             continue
-        else:
-            password = getpass.getpass("Enter password (or Type 'exit' to quit): ")
-            if password == 'exit':
-                return "exit"
-            
-            hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-            try:
-                cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (user_name, hashed_password))
-                conn.commit()
-                print("\nRegistration Successfull ! You can now log in to create your task.")
-            except sqlite3.IntegrityError:
-                print("\nUsername already exists. Please try different username.")
-            finally:
-                conn.close()
 
-            return "registered"
+        password = getpass.getpass("Enter password (or Type 'exit' to quit): ")
+        if password.lower() == 'exit':
+            conn.close()
+            return "exit"
+        
+        hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+        try:
+            cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (user_name, hashed_password))
+            conn.commit()
+            print("\nRegistration Successfull ! You can now log in to create your task.")
+        except sqlite3.IntegrityError:
+            print("\nUsername already exists. Please try different username.")
+        finally:
+            conn.close()
+
+        return "registered"
 
 # %%
 def login():
@@ -230,33 +233,6 @@ def user_login_register():
             break
         else:
             print("\nInvalid Choice. Please Type 'L' to Login or 'R' to Register (or Type 'E' to Exit)")
-
-# %%
-def register_user():
-    conn, cursor = connect_db()
-    while True:
-        user_name = input("Enter username (or Type 'exit' to quit): ")
-        if user_name.lower() == 'exit':
-            return "exit"
-        elif is_user_registered('register', user_name):
-            print("Username already exists. Please try a different username.")
-        else:
-            break
-
-    password = input("Enter password: ")
-    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-
-    try:
-        cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (user_name, hashed_password))
-        conn.commit()
-        print("Registration Successfull ! You can now log in to create your task.")
-    except sqlite3.IntegrityError:
-        print("Username already exists. Please try different username.")
-    finally:
-        conn.close()
-
-    return "registered"
-
 
 # %%
 user_login_register()
