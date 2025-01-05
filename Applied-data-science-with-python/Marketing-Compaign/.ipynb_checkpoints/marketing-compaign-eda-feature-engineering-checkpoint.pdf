@@ -2,15 +2,31 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "d0db36de-9342-4dc1-8bab-7b6f80b32f48",
+   "id": "15f07d42-0eca-48e8-a613-12224c2daf82",
    "metadata": {},
    "source": [
-    "# Marketing Compaign - Data Cleaning, EDA, Hypothesis Testing, and Feature Engineering"
+    "# Project: `Marketing Campaign` - Applied Data Science With Python\n",
+    "## Developed by: `Ravi Ranjan Lal`\n",
+    "\n",
+    "### **Project Overview :**\n",
+    "This project covers the following processes:\n",
+    "1. #### **Data Cleaning**: Ensuring data quality by handling missing, inconsistent, or incorrect values.\n",
+    "2. #### **Exploratory Data Analysis (EDA)**: Deriving insights and identifying patterns through data visualization.\n",
+    "3. #### **Hypothesis Testing**: Conducting statistical tests to validate assumptions.\n",
+    "4. #### **Feature Engineering**: Transforming and encoding data to optimize it for machine learning models."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cdc53435-2bd6-46a7-8726-5561b2b49a10",
+   "metadata": {},
+   "source": [
+    "# Data Cleaning"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 63,
+   "execution_count": 1372,
    "id": "74ace891-b016-4c11-81c4-e2a50c4b53c4",
    "metadata": {},
    "outputs": [],
@@ -20,12 +36,13 @@
     "import numpy as np\n",
     "import matplotlib.pyplot as plt\n",
     "import seaborn as sns\n",
-    "from datetime import datetime"
+    "from datetime import datetime\n",
+    "import warnings"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 64,
+   "execution_count": 1373,
    "id": "8d7ccef7-5175-4ed6-a2c3-ca4082bdc934",
    "metadata": {},
    "outputs": [
@@ -231,7 +248,7 @@
        "[5 rows x 28 columns]"
       ]
      },
-     "execution_count": 64,
+     "execution_count": 1373,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -243,7 +260,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 65,
+   "execution_count": 1374,
    "id": "e7ef8d76-a7c7-417b-9074-a045a1f7c5d4",
    "metadata": {},
    "outputs": [
@@ -253,7 +270,7 @@
        "(2240, 28)"
       ]
      },
-     "execution_count": 65,
+     "execution_count": 1374,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -265,7 +282,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 66,
+   "execution_count": 1375,
    "id": "2b43a0a9-6a25-4644-b907-93ea79e9ff60",
    "metadata": {},
    "outputs": [
@@ -318,7 +335,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 67,
+   "execution_count": 1376,
    "id": "f36e3fd6-4e66-4ef7-9c6b-c13c3ebeb0e4",
    "metadata": {},
    "outputs": [
@@ -618,7 +635,7 @@
        "[8 rows x 23 columns]"
       ]
      },
-     "execution_count": 67,
+     "execution_count": 1376,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -629,16 +646,8 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "id": "552974ac-35dc-4f28-b0e3-ae7af42a7eae",
-   "metadata": {},
-   "source": [
-    "## Data Cleaning"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": 68,
+   "execution_count": 1377,
    "id": "f6d0bde5-261a-439c-8eea-371a417389a9",
    "metadata": {},
    "outputs": [
@@ -676,7 +685,7 @@
        "dtype: int64"
       ]
      },
-     "execution_count": 68,
+     "execution_count": 1377,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -688,7 +697,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 69,
+   "execution_count": 1378,
    "id": "8de633d0-2eff-4599-aa11-18d008f2e3f1",
    "metadata": {},
    "outputs": [],
@@ -699,7 +708,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 70,
+   "execution_count": 1379,
    "id": "a1dbeef9-e098-4831-9393-b4af9686e18d",
    "metadata": {},
    "outputs": [
@@ -709,7 +718,7 @@
        "(2240, 28)"
       ]
      },
-     "execution_count": 70,
+     "execution_count": 1379,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -722,7 +731,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 71,
+   "execution_count": 1380,
    "id": "e06795d4-a285-4fbe-9dc4-33fb32c1dc01",
    "metadata": {},
    "outputs": [
@@ -739,7 +748,7 @@
        "      dtype='object')"
       ]
      },
-     "execution_count": 71,
+     "execution_count": 1380,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -751,7 +760,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 72,
+   "execution_count": 1381,
    "id": "63d95f7d-0e8e-4427-99ee-a648bb8caf49",
    "metadata": {},
    "outputs": [
@@ -768,7 +777,7 @@
        "      dtype='object')"
       ]
      },
-     "execution_count": 72,
+     "execution_count": 1381,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -781,7 +790,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 73,
+   "execution_count": 1382,
    "id": "86cd350d-cc1c-44f1-a0b4-d83ceeead0ac",
    "metadata": {},
    "outputs": [
@@ -791,7 +800,7 @@
        "np.int64(24)"
       ]
      },
-     "execution_count": 73,
+     "execution_count": 1382,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -803,7 +812,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 74,
+   "execution_count": 1383,
    "id": "baf975cb-d4ff-4b2b-9279-4d8fafc403a7",
    "metadata": {},
    "outputs": [
@@ -814,7 +823,7 @@
        "       '$65,819.00 ', '$94,871.00 '], dtype=object)"
       ]
      },
-     "execution_count": 74,
+     "execution_count": 1383,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -825,7 +834,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 75,
+   "execution_count": 1384,
    "id": "a637f96c-831e-4643-ab6e-ee832b58899d",
    "metadata": {},
    "outputs": [],
@@ -839,7 +848,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 76,
+   "execution_count": 1385,
    "id": "55e66040-b45f-4045-a3d1-1b660bc32e73",
    "metadata": {},
    "outputs": [],
@@ -850,7 +859,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 77,
+   "execution_count": 1386,
    "id": "cc2c81e0-9d85-4a85-8ac1-25a497a6b24c",
    "metadata": {},
    "outputs": [
@@ -972,7 +981,7 @@
        "[2 rows x 28 columns]"
       ]
      },
-     "execution_count": 77,
+     "execution_count": 1386,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -983,7 +992,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 78,
+   "execution_count": 1387,
    "id": "5cce8962-a062-49c0-8320-eddb933fcc7c",
    "metadata": {},
    "outputs": [
@@ -1025,7 +1034,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 79,
+   "execution_count": 1388,
    "id": "48ce6647-0a7f-4403-b839-c2fe5fbf36fa",
    "metadata": {},
    "outputs": [
@@ -1035,7 +1044,7 @@
        "array(['Graduation', 'PhD', '2n Cycle', 'Master', 'Basic'], dtype=object)"
       ]
      },
-     "execution_count": 79,
+     "execution_count": 1388,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1046,7 +1055,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 80,
+   "execution_count": 1389,
    "id": "2a12ce8d-58db-4f2c-a608-45385ee44232",
    "metadata": {},
    "outputs": [
@@ -1057,7 +1066,7 @@
        "       'Alone', 'Absurd'], dtype=object)"
       ]
      },
-     "execution_count": 80,
+     "execution_count": 1389,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1068,7 +1077,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 81,
+   "execution_count": 1390,
    "id": "3cadc2e9-5467-4430-83dd-5054c21bae50",
    "metadata": {},
    "outputs": [
@@ -1120,7 +1129,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 82,
+   "execution_count": 1391,
    "id": "b5ea95d9-23de-4b44-a061-88feb84ef607",
    "metadata": {},
    "outputs": [
@@ -1130,7 +1139,7 @@
        "np.int64(0)"
       ]
      },
-     "execution_count": 82,
+     "execution_count": 1391,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1149,12 +1158,12 @@
    "id": "67d7aeb4-8689-4031-af85-9a07a10ecdca",
    "metadata": {},
    "source": [
-    "## Feature Engineering"
+    "#### Converting date feature to seperate features with day, month and year into numerical, later can be used for model training"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 83,
+   "execution_count": 1392,
    "id": "51c9a76d-d540-449e-b1c5-04d354f72889",
    "metadata": {},
    "outputs": [
@@ -1275,7 +1284,7 @@
        "      dtype=object)"
       ]
      },
-     "execution_count": 83,
+     "execution_count": 1392,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1286,7 +1295,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 84,
+   "execution_count": 1393,
    "id": "bf19d783-3cb2-4eac-8c3f-31ca685a4da5",
    "metadata": {},
    "outputs": [],
@@ -1295,12 +1304,13 @@
     "df['Dt_Customer'] = pd.to_datetime(df['Dt_Customer'], format='%m/%d/%y')\n",
     "df['Day_Customer_Enroll'] = df['Dt_Customer'].dt.day\n",
     "df['Month_Customer_Enroll'] = df['Dt_Customer'].dt.month\n",
-    "df['Year_Customer_Enroll'] = df['Dt_Customer'].dt.year"
+    "df['Year_Customer_Enroll'] = df['Dt_Customer'].dt.year\n",
+    "df.drop('Dt_Customer', axis=1, inplace=True)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 85,
+   "execution_count": 1394,
    "id": "72eb5a55-8ed9-4b38-9c34-a1d9b4c950c4",
    "metadata": {},
    "outputs": [
@@ -1332,9 +1342,9 @@
        "      <th>Income</th>\n",
        "      <th>Kidhome</th>\n",
        "      <th>Teenhome</th>\n",
-       "      <th>Dt_Customer</th>\n",
        "      <th>Recency</th>\n",
        "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
        "      <th>...</th>\n",
        "      <th>AcceptedCmp4</th>\n",
        "      <th>AcceptedCmp5</th>\n",
@@ -1358,9 +1368,9 @@
        "      <td>84835.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-16</td>\n",
        "      <td>0</td>\n",
        "      <td>189</td>\n",
+       "      <td>104</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -1382,9 +1392,9 @@
        "      <td>57091.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-15</td>\n",
        "      <td>0</td>\n",
        "      <td>464</td>\n",
+       "      <td>5</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -1399,7 +1409,7 @@
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>2 rows × 31 columns</p>\n",
+       "<p>2 rows × 30 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
@@ -1407,9 +1417,9 @@
        "0  1826        1970  Graduation       Divorced  84835.0        0         0   \n",
        "1     1        1961  Graduation         Single  57091.0        0         0   \n",
        "\n",
-       "  Dt_Customer  Recency  MntWines  ...  AcceptedCmp4  AcceptedCmp5  \\\n",
-       "0  2014-06-16        0       189  ...             0             0   \n",
-       "1  2014-06-15        0       464  ...             0             0   \n",
+       "   Recency  MntWines  MntFruits  ...  AcceptedCmp4  AcceptedCmp5  \\\n",
+       "0        0       189        104  ...             0             0   \n",
+       "1        0       464          5  ...             0             0   \n",
        "\n",
        "   AcceptedCmp1  AcceptedCmp2  Response  Complain  Country  \\\n",
        "0             0             0         1         0       SP   \n",
@@ -1419,16 +1429,24 @@
        "0                   16                      6                  2014  \n",
        "1                   15                      6                  2014  \n",
        "\n",
-       "[2 rows x 31 columns]"
+       "[2 rows x 30 columns]"
       ]
      },
-     "execution_count": 85,
+     "execution_count": 1394,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "df.head(2) # verify the 3 new date features updated in the data frame"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "25fd6ac2-0bf1-4588-a474-0b8217a9f97c",
+   "metadata": {},
+   "source": [
+    "# EDA - Visualization"
    ]
   },
   {
@@ -1441,7 +1459,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 86,
+   "execution_count": 1395,
    "id": "916e3be6-1551-4951-bdda-4cef7e870293",
    "metadata": {},
    "outputs": [],
@@ -1452,7 +1470,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 87,
+   "execution_count": 1396,
    "id": "f1e38503-85b6-43ee-bee5-a1f4441e1213",
    "metadata": {},
    "outputs": [],
@@ -1464,7 +1482,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 88,
+   "execution_count": 1397,
    "id": "39127afd-df8d-40ea-b4c6-0dadb4763c2b",
    "metadata": {},
    "outputs": [],
@@ -1476,7 +1494,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 89,
+   "execution_count": 1398,
    "id": "9146541c-b6c9-4e51-888b-4418f221b8ea",
    "metadata": {},
    "outputs": [
@@ -1508,9 +1526,9 @@
        "      <th>Income</th>\n",
        "      <th>Kidhome</th>\n",
        "      <th>Teenhome</th>\n",
-       "      <th>Dt_Customer</th>\n",
        "      <th>Recency</th>\n",
        "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
        "      <th>...</th>\n",
        "      <th>AcceptedCmp2</th>\n",
        "      <th>Response</th>\n",
@@ -1534,9 +1552,9 @@
        "      <td>84835.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-16</td>\n",
        "      <td>0</td>\n",
        "      <td>189</td>\n",
+       "      <td>104</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
@@ -1558,9 +1576,9 @@
        "      <td>57091.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-15</td>\n",
        "      <td>0</td>\n",
        "      <td>464</td>\n",
+       "      <td>5</td>\n",
        "      <td>...</td>\n",
        "      <td>1</td>\n",
        "      <td>1</td>\n",
@@ -1582,9 +1600,9 @@
        "      <td>67267.0</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
-       "      <td>2014-05-13</td>\n",
        "      <td>0</td>\n",
        "      <td>134</td>\n",
+       "      <td>11</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -1606,9 +1624,9 @@
        "      <td>32474.0</td>\n",
        "      <td>1</td>\n",
        "      <td>1</td>\n",
-       "      <td>2014-05-11</td>\n",
        "      <td>0</td>\n",
        "      <td>10</td>\n",
+       "      <td>0</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -1630,9 +1648,9 @@
        "      <td>21474.0</td>\n",
        "      <td>1</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-04-08</td>\n",
        "      <td>0</td>\n",
        "      <td>6</td>\n",
+       "      <td>16</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
@@ -1647,7 +1665,7 @@
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>5 rows × 34 columns</p>\n",
+       "<p>5 rows × 33 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
@@ -1658,12 +1676,12 @@
        "3   1386        1967  Graduation       Together  32474.0        1         1   \n",
        "4   5371        1989  Graduation         Single  21474.0        1         0   \n",
        "\n",
-       "  Dt_Customer  Recency  MntWines  ...  AcceptedCmp2  Response  Complain  \\\n",
-       "0  2014-06-16        0       189  ...             0         1         0   \n",
-       "1  2014-06-15        0       464  ...             1         1         0   \n",
-       "2  2014-05-13        0       134  ...             0         0         0   \n",
-       "3  2014-05-11        0        10  ...             0         0         0   \n",
-       "4  2014-04-08        0         6  ...             0         1         0   \n",
+       "   Recency  MntWines  MntFruits  ...  AcceptedCmp2  Response  Complain  \\\n",
+       "0        0       189        104  ...             0         1         0   \n",
+       "1        0       464          5  ...             1         1         0   \n",
+       "2        0       134         11  ...             0         0         0   \n",
+       "3        0        10          0  ...             0         0         0   \n",
+       "4        0         6         16  ...             0         1         0   \n",
        "\n",
        "   Country  Day_Customer_Enroll  Month_Customer_Enroll  Year_Customer_Enroll  \\\n",
        "0       SP                   16                      6                  2014   \n",
@@ -1679,24 +1697,16 @@
        "3               2   58              11  \n",
        "4               1   36              91  \n",
        "\n",
-       "[5 rows x 34 columns]"
+       "[5 rows x 33 columns]"
       ]
      },
-     "execution_count": 89,
+     "execution_count": 1398,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "df.head()"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "25fd6ac2-0bf1-4588-a474-0b8217a9f97c",
-   "metadata": {},
-   "source": [
-    "## Visualization"
    ]
   },
   {
@@ -1709,7 +1719,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 90,
+   "execution_count": 1399,
    "id": "6d94e051-f406-468f-bf7c-41aea46dfb79",
    "metadata": {},
    "outputs": [
@@ -1783,7 +1793,7 @@
        "1         MntFruits    58917"
       ]
      },
-     "execution_count": 90,
+     "execution_count": 1399,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1799,7 +1809,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 91,
+   "execution_count": 1400,
    "id": "f7c61dca-701f-4c03-b5dd-ff41040ca084",
    "metadata": {},
    "outputs": [
@@ -1849,7 +1859,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 92,
+   "execution_count": 1401,
    "id": "7a9b5921-26ad-42bf-9f35-92de59bddd5a",
    "metadata": {},
    "outputs": [
@@ -1917,12 +1927,13 @@
        "4   33                  0.076923"
       ]
      },
-     "execution_count": 92,
+     "execution_count": 1401,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
+    "# createing a df Compaign Acceptance Rate, with the mean of Response grouped by Age\n",
     "df_age_acceptance_rate = df.groupby('Age')['Response'].mean().reset_index()\n",
     "df_age_acceptance_rate.columns = ['Age', 'Compaign Acceptance Rate']\n",
     "df_age_acceptance_rate.head()"
@@ -1930,7 +1941,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 93,
+   "execution_count": 1402,
    "id": "2339133f-8728-4dd5-a54f-6a1509e7411f",
    "metadata": {},
    "outputs": [
@@ -1946,6 +1957,7 @@
     }
    ],
    "source": [
+    "# plotting Compaign Acceptance Rate vs Age\n",
     "plt.figure(figsize=(10,6))\n",
     "sns.lineplot(\n",
     "    x='Age',\n",
@@ -1984,7 +1996,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 94,
+   "execution_count": 1403,
    "id": "e6f3c79e-7386-4ef1-b87e-8fe0fef51720",
    "metadata": {},
    "outputs": [
@@ -1994,7 +2006,7 @@
        "array(['SP', 'CA', 'US', 'AUS', 'GER', 'IND', 'SA', 'ME'], dtype=object)"
       ]
      },
-     "execution_count": 94,
+     "execution_count": 1403,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2005,7 +2017,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 95,
+   "execution_count": 1404,
    "id": "0d5b43d4-70d2-4a37-a5b0-d933b64d2254",
    "metadata": {},
    "outputs": [
@@ -2091,12 +2103,13 @@
        "4      ME                         2"
       ]
      },
-     "execution_count": 95,
+     "execution_count": 1404,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
+    "# creating a df Last Campaign Acceptance, sum of Response grouped by Country\n",
     "df_country_by_offer_acceptance = df.groupby(\"Country\")['Response'].sum().reset_index()\n",
     "df_country_by_offer_acceptance.columns = ['Country', \"Last Campaign Acceptance\"]\n",
     "df_country_by_offer_acceptance = df_country_by_offer_acceptance.sort_values(\"Last Campaign Acceptance\", ascending=False)\n",
@@ -2105,7 +2118,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 96,
+   "execution_count": 1405,
    "id": "ef4330b4-458e-4a05-b6ce-4e00d0a67c40",
    "metadata": {},
    "outputs": [
@@ -2121,6 +2134,7 @@
     }
    ],
    "source": [
+    "# Plotting Customer's Acceptance of Last campaign by Country\n",
     "plt.figure(figsize=(10,6))\n",
     "sns.barplot(\n",
     "    x=\"Country\",\n",
@@ -2155,7 +2169,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 97,
+   "execution_count": 1406,
    "id": "b7c975d3-9eef-4df8-aa11-96af94302505",
    "metadata": {},
    "outputs": [
@@ -2187,9 +2201,9 @@
        "      <th>Income</th>\n",
        "      <th>Kidhome</th>\n",
        "      <th>Teenhome</th>\n",
-       "      <th>Dt_Customer</th>\n",
        "      <th>Recency</th>\n",
        "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
        "      <th>...</th>\n",
        "      <th>AcceptedCmp2</th>\n",
        "      <th>Response</th>\n",
@@ -2213,9 +2227,9 @@
        "      <td>84835.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-16</td>\n",
        "      <td>0</td>\n",
        "      <td>189</td>\n",
+       "      <td>104</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
@@ -2237,9 +2251,9 @@
        "      <td>57091.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-15</td>\n",
        "      <td>0</td>\n",
        "      <td>464</td>\n",
+       "      <td>5</td>\n",
        "      <td>...</td>\n",
        "      <td>1</td>\n",
        "      <td>1</td>\n",
@@ -2261,9 +2275,9 @@
        "      <td>67267.0</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
-       "      <td>2014-05-13</td>\n",
        "      <td>0</td>\n",
        "      <td>134</td>\n",
+       "      <td>11</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -2285,9 +2299,9 @@
        "      <td>32474.0</td>\n",
        "      <td>1</td>\n",
        "      <td>1</td>\n",
-       "      <td>2014-05-11</td>\n",
        "      <td>0</td>\n",
        "      <td>10</td>\n",
+       "      <td>0</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -2309,9 +2323,9 @@
        "      <td>21474.0</td>\n",
        "      <td>1</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-04-08</td>\n",
        "      <td>0</td>\n",
        "      <td>6</td>\n",
+       "      <td>16</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
@@ -2326,7 +2340,7 @@
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>5 rows × 34 columns</p>\n",
+       "<p>5 rows × 33 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
@@ -2337,12 +2351,12 @@
        "3   1386        1967  Graduation       Together  32474.0        1         1   \n",
        "4   5371        1989  Graduation         Single  21474.0        1         0   \n",
        "\n",
-       "  Dt_Customer  Recency  MntWines  ...  AcceptedCmp2  Response  Complain  \\\n",
-       "0  2014-06-16        0       189  ...             0         1         0   \n",
-       "1  2014-06-15        0       464  ...             1         1         0   \n",
-       "2  2014-05-13        0       134  ...             0         0         0   \n",
-       "3  2014-05-11        0        10  ...             0         0         0   \n",
-       "4  2014-04-08        0         6  ...             0         1         0   \n",
+       "   Recency  MntWines  MntFruits  ...  AcceptedCmp2  Response  Complain  \\\n",
+       "0        0       189        104  ...             0         1         0   \n",
+       "1        0       464          5  ...             1         1         0   \n",
+       "2        0       134         11  ...             0         0         0   \n",
+       "3        0        10          0  ...             0         0         0   \n",
+       "4        0         6         16  ...             0         1         0   \n",
        "\n",
        "   Country  Day_Customer_Enroll  Month_Customer_Enroll  Year_Customer_Enroll  \\\n",
        "0       SP                   16                      6                  2014   \n",
@@ -2358,10 +2372,10 @@
        "3               2   58              11  \n",
        "4               1   36              91  \n",
        "\n",
-       "[5 rows x 34 columns]"
+       "[5 rows x 33 columns]"
       ]
      },
-     "execution_count": 97,
+     "execution_count": 1406,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2372,7 +2386,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 98,
+   "execution_count": 1407,
    "id": "b0ccd687-292b-4410-9329-859d5f4fa545",
    "metadata": {},
    "outputs": [
@@ -2388,6 +2402,7 @@
     }
    ],
    "source": [
+    "# Plotting Total Spending vs Total Children\n",
     "plt.title(\"Total Spending vs Total Children\")\n",
     "sns.boxplot(\n",
     "    x=\"Total_Children\",\n",
@@ -2401,7 +2416,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 99,
+   "execution_count": 1408,
    "id": "b7bc60f5-cdd6-48e2-90e3-c13a6db59783",
    "metadata": {},
    "outputs": [
@@ -2415,15 +2430,16 @@
     {
      "data": {
       "text/plain": [
-       "(708, 34)"
+       "(708, 33)"
       ]
      },
-     "execution_count": 99,
+     "execution_count": 1408,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
+    "# calculate IQR and finding outliers\n",
     "q1 = df['Total_Spending'].quantile(0.25)\n",
     "q3 = df['Total_Spending'].quantile(0.5)\n",
     "IQR = q3 - q1\n",
@@ -2458,7 +2474,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 100,
+   "execution_count": 1409,
    "id": "a7493a83-7e32-4454-9cd2-fc86ddaf3d17",
    "metadata": {},
    "outputs": [
@@ -2468,7 +2484,7 @@
        "array(['Graduation', 'PhD', '2n Cycle', 'Master', 'Basic'], dtype=object)"
       ]
      },
-     "execution_count": 100,
+     "execution_count": 1409,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2479,7 +2495,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 101,
+   "execution_count": 1410,
    "id": "21967cee-1317-45eb-a068-bcf25506517a",
    "metadata": {},
    "outputs": [
@@ -2547,12 +2563,13 @@
        "1       Basic         0"
       ]
      },
-     "execution_count": 101,
+     "execution_count": 1410,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
+    "# education_with_complain df, Sum of complain grouped by Education\n",
     "df_education_with_complain = df.groupby('Education')['Complain'].sum().reset_index()\n",
     "df_education_with_complain = df_education_with_complain.sort_values(\"Complain\", ascending=False)\n",
     "df_education_with_complain"
@@ -2560,7 +2577,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 102,
+   "execution_count": 1411,
    "id": "516b641e-78be-4291-b2ca-46f8820ba48d",
    "metadata": {},
    "outputs": [
@@ -2576,6 +2593,7 @@
     }
    ],
    "source": [
+    "#Plotting Complaints( in last 2 Years) by Education Background\n",
     "plt.title(\"Complaints( in last 2 Years) by Education Background\")\n",
     "sns.barplot(\n",
     "    x='Education',\n",
@@ -2621,7 +2639,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 103,
+   "execution_count": 1412,
    "id": "b7169727-276d-478b-b9ca-acde0a315183",
    "metadata": {},
    "outputs": [
@@ -2653,9 +2671,9 @@
        "      <th>Income</th>\n",
        "      <th>Kidhome</th>\n",
        "      <th>Teenhome</th>\n",
-       "      <th>Dt_Customer</th>\n",
        "      <th>Recency</th>\n",
        "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
        "      <th>...</th>\n",
        "      <th>AcceptedCmp2</th>\n",
        "      <th>Response</th>\n",
@@ -2679,9 +2697,9 @@
        "      <td>84835.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-16</td>\n",
        "      <td>0</td>\n",
        "      <td>189</td>\n",
+       "      <td>104</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
@@ -2703,9 +2721,9 @@
        "      <td>57091.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-15</td>\n",
        "      <td>0</td>\n",
        "      <td>464</td>\n",
+       "      <td>5</td>\n",
        "      <td>...</td>\n",
        "      <td>1</td>\n",
        "      <td>1</td>\n",
@@ -2720,7 +2738,7 @@
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>2 rows × 34 columns</p>\n",
+       "<p>2 rows × 33 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
@@ -2728,9 +2746,9 @@
        "0  1826        1970  Graduation       Divorced  84835.0        0         0   \n",
        "1     1        1961  Graduation         Single  57091.0        0         0   \n",
        "\n",
-       "  Dt_Customer  Recency  MntWines  ...  AcceptedCmp2  Response  Complain  \\\n",
-       "0  2014-06-16        0       189  ...             0         1         0   \n",
-       "1  2014-06-15        0       464  ...             1         1         0   \n",
+       "   Recency  MntWines  MntFruits  ...  AcceptedCmp2  Response  Complain  \\\n",
+       "0        0       189        104  ...             0         1         0   \n",
+       "1        0       464          5  ...             1         1         0   \n",
        "\n",
        "   Country  Day_Customer_Enroll  Month_Customer_Enroll  Year_Customer_Enroll  \\\n",
        "0       SP                   16                      6                  2014   \n",
@@ -2740,10 +2758,10 @@
        "0               0   55            1190  \n",
        "1               0   64             577  \n",
        "\n",
-       "[2 rows x 34 columns]"
+       "[2 rows x 33 columns]"
       ]
      },
-     "execution_count": 103,
+     "execution_count": 1412,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2754,7 +2772,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 104,
+   "execution_count": 1413,
    "id": "a5cf656d-2023-4ea1-9ddc-9fe00264f4b3",
    "metadata": {},
    "outputs": [
@@ -2762,18 +2780,18 @@
      "data": {
       "text/plain": [
        "Index(['ID', 'Year_Birth', 'Education', 'Marital_Status', 'Income', 'Kidhome',\n",
-       "       'Teenhome', 'Dt_Customer', 'Recency', 'MntWines', 'MntFruits',\n",
-       "       'MntMeatProducts', 'MntFishProducts', 'MntSweetProducts',\n",
-       "       'MntGoldProds', 'NumDealsPurchases', 'NumWebPurchases',\n",
-       "       'NumCatalogPurchases', 'NumStorePurchases', 'NumWebVisitsMonth',\n",
-       "       'AcceptedCmp3', 'AcceptedCmp4', 'AcceptedCmp5', 'AcceptedCmp1',\n",
-       "       'AcceptedCmp2', 'Response', 'Complain', 'Country',\n",
-       "       'Day_Customer_Enroll', 'Month_Customer_Enroll', 'Year_Customer_Enroll',\n",
-       "       'Total_Children', 'Age', 'Total_Spending'],\n",
+       "       'Teenhome', 'Recency', 'MntWines', 'MntFruits', 'MntMeatProducts',\n",
+       "       'MntFishProducts', 'MntSweetProducts', 'MntGoldProds',\n",
+       "       'NumDealsPurchases', 'NumWebPurchases', 'NumCatalogPurchases',\n",
+       "       'NumStorePurchases', 'NumWebVisitsMonth', 'AcceptedCmp3',\n",
+       "       'AcceptedCmp4', 'AcceptedCmp5', 'AcceptedCmp1', 'AcceptedCmp2',\n",
+       "       'Response', 'Complain', 'Country', 'Day_Customer_Enroll',\n",
+       "       'Month_Customer_Enroll', 'Year_Customer_Enroll', 'Total_Children',\n",
+       "       'Age', 'Total_Spending'],\n",
        "      dtype='object')"
       ]
      },
-     "execution_count": 104,
+     "execution_count": 1413,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2784,7 +2802,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 105,
+   "execution_count": 1414,
    "id": "b8841651-b13d-4c62-854b-a6b6aab8c08a",
    "metadata": {},
    "outputs": [
@@ -2852,7 +2870,7 @@
        "4   Younger                  2"
       ]
      },
-     "execution_count": 105,
+     "execution_count": 1414,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2865,7 +2883,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 106,
+   "execution_count": 1415,
    "id": "bd52a6ea-efbf-4e7f-a5b7-055e58c63c8d",
    "metadata": {},
    "outputs": [
@@ -2908,7 +2926,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 107,
+   "execution_count": 1416,
    "id": "d7d1deed-1467-4bca-b93a-b7ad12d305da",
    "metadata": {},
    "outputs": [],
@@ -2918,7 +2936,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 108,
+   "execution_count": 1417,
    "id": "5d66d26a-351e-42bd-83ac-51b6ba764fbf",
    "metadata": {
     "scrolled": true
@@ -2944,6 +2962,7 @@
     }
    ],
    "source": [
+    "# creating two groups with Younger and Older with number of store purchases\n",
     "younger_grp_df = df[df['Age_Group'] == 'Younger'][['NumStorePurchases']].reset_index(drop=True)\n",
     "older_grp_df = df[df['Age_Group'] == 'Older'][['NumStorePurchases']].reset_index(drop=True)\n",
     "print(younger_grp_df.head())\n",
@@ -2952,7 +2971,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 109,
+   "execution_count": 1418,
    "id": "3aa6c111-fe8d-4570-91a6-ca2132dfc986",
    "metadata": {},
    "outputs": [
@@ -3003,7 +3022,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 110,
+   "execution_count": 1419,
    "id": "683bd99c-0fdf-4dd8-bb94-0169b2c9c54a",
    "metadata": {},
    "outputs": [
@@ -3035,9 +3054,9 @@
        "      <th>Income</th>\n",
        "      <th>Kidhome</th>\n",
        "      <th>Teenhome</th>\n",
-       "      <th>Dt_Customer</th>\n",
        "      <th>Recency</th>\n",
        "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
        "      <th>...</th>\n",
        "      <th>Response</th>\n",
        "      <th>Complain</th>\n",
@@ -3061,9 +3080,9 @@
        "      <td>84835.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-16</td>\n",
        "      <td>0</td>\n",
        "      <td>189</td>\n",
+       "      <td>104</td>\n",
        "      <td>...</td>\n",
        "      <td>1</td>\n",
        "      <td>0</td>\n",
@@ -3085,9 +3104,9 @@
        "      <td>57091.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-06-15</td>\n",
        "      <td>0</td>\n",
        "      <td>464</td>\n",
+       "      <td>5</td>\n",
        "      <td>...</td>\n",
        "      <td>1</td>\n",
        "      <td>0</td>\n",
@@ -3109,9 +3128,9 @@
        "      <td>67267.0</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
-       "      <td>2014-05-13</td>\n",
        "      <td>0</td>\n",
        "      <td>134</td>\n",
+       "      <td>11</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -3133,9 +3152,9 @@
        "      <td>32474.0</td>\n",
        "      <td>1</td>\n",
        "      <td>1</td>\n",
-       "      <td>2014-05-11</td>\n",
        "      <td>0</td>\n",
        "      <td>10</td>\n",
+       "      <td>0</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -3157,9 +3176,9 @@
        "      <td>21474.0</td>\n",
        "      <td>1</td>\n",
        "      <td>0</td>\n",
-       "      <td>2014-04-08</td>\n",
        "      <td>0</td>\n",
        "      <td>6</td>\n",
+       "      <td>16</td>\n",
        "      <td>...</td>\n",
        "      <td>1</td>\n",
        "      <td>0</td>\n",
@@ -3174,7 +3193,7 @@
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>5 rows × 35 columns</p>\n",
+       "<p>5 rows × 34 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
@@ -3185,12 +3204,12 @@
        "3   1386        1967  Graduation       Together  32474.0        1         1   \n",
        "4   5371        1989  Graduation         Single  21474.0        1         0   \n",
        "\n",
-       "  Dt_Customer  Recency  MntWines  ...  Response  Complain  Country  \\\n",
-       "0  2014-06-16        0       189  ...         1         0       SP   \n",
-       "1  2014-06-15        0       464  ...         1         0       CA   \n",
-       "2  2014-05-13        0       134  ...         0         0       US   \n",
-       "3  2014-05-11        0        10  ...         0         0      AUS   \n",
-       "4  2014-04-08        0         6  ...         1         0       SP   \n",
+       "   Recency  MntWines  MntFruits  ...  Response  Complain  Country  \\\n",
+       "0        0       189        104  ...         1         0       SP   \n",
+       "1        0       464          5  ...         1         0       CA   \n",
+       "2        0       134         11  ...         0         0       US   \n",
+       "3        0        10          0  ...         0         0      AUS   \n",
+       "4        0         6         16  ...         1         0       SP   \n",
        "\n",
        "   Day_Customer_Enroll  Month_Customer_Enroll  Year_Customer_Enroll  \\\n",
        "0                   16                      6                  2014   \n",
@@ -3206,10 +3225,10 @@
        "3               2   58              11      Older  \n",
        "4               1   36              91    Younger  \n",
        "\n",
-       "[5 rows x 35 columns]"
+       "[5 rows x 34 columns]"
       ]
      },
-     "execution_count": 110,
+     "execution_count": 1419,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3220,7 +3239,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 111,
+   "execution_count": 1420,
    "id": "2bf369ef-69f8-437c-80f5-190d3c99b90b",
    "metadata": {},
    "outputs": [
@@ -3228,18 +3247,18 @@
      "data": {
       "text/plain": [
        "Index(['ID', 'Year_Birth', 'Education', 'Marital_Status', 'Income', 'Kidhome',\n",
-       "       'Teenhome', 'Dt_Customer', 'Recency', 'MntWines', 'MntFruits',\n",
-       "       'MntMeatProducts', 'MntFishProducts', 'MntSweetProducts',\n",
-       "       'MntGoldProds', 'NumDealsPurchases', 'NumWebPurchases',\n",
-       "       'NumCatalogPurchases', 'NumStorePurchases', 'NumWebVisitsMonth',\n",
-       "       'AcceptedCmp3', 'AcceptedCmp4', 'AcceptedCmp5', 'AcceptedCmp1',\n",
-       "       'AcceptedCmp2', 'Response', 'Complain', 'Country',\n",
-       "       'Day_Customer_Enroll', 'Month_Customer_Enroll', 'Year_Customer_Enroll',\n",
-       "       'Total_Children', 'Age', 'Total_Spending', 'Age_Group'],\n",
+       "       'Teenhome', 'Recency', 'MntWines', 'MntFruits', 'MntMeatProducts',\n",
+       "       'MntFishProducts', 'MntSweetProducts', 'MntGoldProds',\n",
+       "       'NumDealsPurchases', 'NumWebPurchases', 'NumCatalogPurchases',\n",
+       "       'NumStorePurchases', 'NumWebVisitsMonth', 'AcceptedCmp3',\n",
+       "       'AcceptedCmp4', 'AcceptedCmp5', 'AcceptedCmp1', 'AcceptedCmp2',\n",
+       "       'Response', 'Complain', 'Country', 'Day_Customer_Enroll',\n",
+       "       'Month_Customer_Enroll', 'Year_Customer_Enroll', 'Total_Children',\n",
+       "       'Age', 'Total_Spending', 'Age_Group'],\n",
        "      dtype='object')"
       ]
      },
-     "execution_count": 111,
+     "execution_count": 1420,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3250,17 +3269,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 112,
+   "execution_count": 1421,
    "id": "b03fe1f5-77e1-4b33-aca1-0d1ca35f0303",
    "metadata": {},
    "outputs": [],
    "source": [
+    "#create a df with Kids_Group with two variables\n",
     "df['Kids_Group'] = df['Total_Children'].apply(lambda x: 'With_Kids' if x > 0 else 'Without_Kids')"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 113,
+   "execution_count": 1422,
    "id": "83d700fe-81cb-49f5-a5f1-54278c79b1ac",
    "metadata": {},
    "outputs": [
@@ -3276,6 +3296,7 @@
     }
    ],
    "source": [
+    "#Plotting Kids Status With Number Of Web Purchases\n",
     "plt.figure(figsize=(10,6))\n",
     "sns.boxplot(x='Kids_Group', y='NumWebPurchases', data=df, palette='Set2', hue=\"Kids_Group\")\n",
     "plt.xlabel(\"Kids Group\", fontsize=12)\n",
@@ -3305,7 +3326,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 114,
+   "execution_count": 1423,
    "id": "9ca09dc7-107b-4126-9494-633076f283dc",
    "metadata": {},
    "outputs": [],
@@ -3315,18 +3336,19 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 115,
+   "execution_count": 1424,
    "id": "3bd5e2ee-157d-450b-99ce-5e47d726fb82",
    "metadata": {},
    "outputs": [],
    "source": [
+    "#Creating two groups with and without kids based on number of web purchases\n",
     "number_web_purchase_with_kids = df[df['Total_Children'] > 0][['NumWebPurchases']].reset_index(drop=True)\n",
     "number_web_purchase_without_kids = df[df['Total_Children'] == 0][['NumWebPurchases']].reset_index(drop=True)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 116,
+   "execution_count": 1425,
    "id": "6fdfbe91-1653-4abf-8258-8bd9531b2497",
    "metadata": {},
    "outputs": [
@@ -3341,6 +3363,7 @@
     }
    ],
    "source": [
+    "# t-test stats for hypothesis\n",
     "t_stat, p_value = ttest_ind(number_web_purchase_with_kids, number_web_purchase_without_kids, equal_var=False)\n",
     "\n",
     "print(f\"T-statistic: {t_stat[0]:.4f}\")\n",
@@ -3376,7 +3399,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 117,
+   "execution_count": 1426,
    "id": "f9f1fc03-46a1-4c10-8718-ea4b0d6999af",
    "metadata": {},
    "outputs": [
@@ -3411,7 +3434,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 118,
+   "execution_count": 1427,
    "id": "d683ff11-00fe-45da-8180-8525efd6d57d",
    "metadata": {},
    "outputs": [
@@ -3458,7 +3481,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 119,
+   "execution_count": 1428,
    "id": "4834a6ec-9aed-41b9-ad1e-4f33dca7154c",
    "metadata": {},
    "outputs": [
@@ -3477,21 +3500,18 @@
     "import pandas as pd\n",
     "from scipy.stats import f_oneway\n",
     "\n",
-    "# Example dataset (replace with your actual data)\n",
-    "# Assuming 'df' is your DataFrame\n",
     "deals_purchases = df['NumDealsPurchases']\n",
     "web_purchases = df['NumWebPurchases']\n",
     "catalog_purchases = df['NumCatalogPurchases']\n",
     "store_purchases = df['NumStorePurchases']\n",
     "\n",
-    "# Perform One-Way ANOVA\n",
+    "# one way anova test for all the ditribution channels\n",
     "anova_result = f_oneway(deals_purchases, web_purchases, catalog_purchases, store_purchases)\n",
     "\n",
-    "# Print the results\n",
     "print(\"ANOVA F-statistic:\", anova_result.statistic)\n",
     "print(\"ANOVA p-value:\", anova_result.pvalue)\n",
     "\n",
-    "# Interpretation\n",
+    "# Hypothesis Test\n",
     "if anova_result.pvalue < 0.05:\n",
     "    print(\"The p-value is less than 0.05. We reject the null hypothesis.\")\n",
     "    print(\"There is a significant difference in the means of at least one distribution channel.\")\n",
@@ -3502,7 +3522,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 120,
+   "execution_count": 1429,
    "id": "75eaa9a0-65d9-46b6-9714-6092d8d77302",
    "metadata": {},
    "outputs": [],
@@ -3512,7 +3532,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 121,
+   "execution_count": 1430,
    "id": "2d3bb0e4-36f6-4844-ab8e-e86ee9a89992",
    "metadata": {},
    "outputs": [
@@ -3564,7 +3584,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 128,
+   "execution_count": 1431,
    "id": "9bfbfb74-214e-4d20-a434-e7ac11d73250",
    "metadata": {},
    "outputs": [
@@ -3580,7 +3600,10 @@
     }
    ],
    "source": [
+    "# creating a column for total purchase grouped by US and Rest of the world\n",
     "df['total_purchases_grp'] = df['Country'].apply(lambda x : 'US' if x == 'US' else 'Rest_of_World').reset_index(drop=True)\n",
+    "\n",
+    "# bos plot for Total Purchases for US vs Rest of the World\n",
     "plt.title(\"Box Plot for Total Purchases for US vs Rest of the World\")\n",
     "sns.boxplot(x='total_purchases_grp', y='Total_Spending', data=df, palette='Set2', hue='total_purchases_grp')\n",
     "plt.grid(axis='y', linestyle=\"--\", alpha=0.8)\n",
@@ -3610,7 +3633,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 139,
+   "execution_count": 1432,
    "id": "408f3652-635b-4348-ba2e-a026d53606ec",
    "metadata": {},
    "outputs": [],
@@ -3621,7 +3644,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 130,
+   "execution_count": 1433,
    "id": "d99e48af-c5f3-4615-80c4-7b2285edb8fb",
    "metadata": {},
    "outputs": [],
@@ -3631,7 +3654,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 141,
+   "execution_count": 1434,
    "id": "6a38253c-fb01-4754-a6c8-7eb6fe094e37",
    "metadata": {},
    "outputs": [
@@ -3639,13 +3662,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "T-statistics: -3.4229\n",
+      "T-statistics: -3.5419\n",
       "P Value: 0.7630\n",
       "Failed to Reject Null Hypothesis: There is no significant difference in mean of US vs Rest of the world\n"
      ]
     }
    ],
    "source": [
+    "# t stat for Hypothesis Test for US vs rest of the world\n",
     "t_stats, p_value = ttest_ind(US_total_spending, rest_of_world_spending)\n",
     "\n",
     "print(f\"T-statistics: {t_stat[0]:.4f}\")\n",
@@ -3669,84 +3693,2372 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "5420aac6-dd68-455e-b2c2-7e938d0813c1",
+   "cell_type": "markdown",
+   "id": "781e0e14-d530-4c09-bda8-9a399a7d4bec",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "# Feature Engineering : (Data Encoding, Normalization/Standardization)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9c144ab1-a93c-473c-8ec3-2ce08d1cb76c",
+   "metadata": {},
+   "source": [
+    "## Encoding\n",
+    "#### Encoding is performed after visualization and hypothesis testing to ensure that the categorical variables remain intact and relevant for Visualization and Hypothesis.\n",
+    "#### Encoding ensures that the categorcial features are transfomed to numeric for machine learning as, machines can only process numerical data for training.\n",
+    "\n",
+    "#### Encoding to be perfomed for Categorical variables : `Education` , `Marital_Status`, `Country`\n",
+    "#### **`NOTE`** : We will drop the features `Age_Group`, `Kids_Group`, and `total_purchases_grp` as these were created for the purpose of analysis from the raw data and the relevant information alread exist in the raw features."
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "40e87ff0-e605-48fe-ad8b-29ff55525c5a",
+   "execution_count": 1435,
+   "id": "b7e5a1e3-a721-4fd0-ad24-357efb8e9076",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>ID</th>\n",
+       "      <th>Year_Birth</th>\n",
+       "      <th>Education</th>\n",
+       "      <th>Marital_Status</th>\n",
+       "      <th>Income</th>\n",
+       "      <th>Kidhome</th>\n",
+       "      <th>Teenhome</th>\n",
+       "      <th>Recency</th>\n",
+       "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
+       "      <th>...</th>\n",
+       "      <th>AcceptedCmp2</th>\n",
+       "      <th>Response</th>\n",
+       "      <th>Complain</th>\n",
+       "      <th>Country</th>\n",
+       "      <th>Day_Customer_Enroll</th>\n",
+       "      <th>Month_Customer_Enroll</th>\n",
+       "      <th>Year_Customer_Enroll</th>\n",
+       "      <th>Total_Children</th>\n",
+       "      <th>Age</th>\n",
+       "      <th>Total_Spending</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1826</td>\n",
+       "      <td>1970</td>\n",
+       "      <td>Graduation</td>\n",
+       "      <td>Divorced</td>\n",
+       "      <td>84835.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>189</td>\n",
+       "      <td>104</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>SP</td>\n",
+       "      <td>16</td>\n",
+       "      <td>6</td>\n",
+       "      <td>2014</td>\n",
+       "      <td>0</td>\n",
+       "      <td>55</td>\n",
+       "      <td>1190</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1961</td>\n",
+       "      <td>Graduation</td>\n",
+       "      <td>Single</td>\n",
+       "      <td>57091.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>464</td>\n",
+       "      <td>5</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>CA</td>\n",
+       "      <td>15</td>\n",
+       "      <td>6</td>\n",
+       "      <td>2014</td>\n",
+       "      <td>0</td>\n",
+       "      <td>64</td>\n",
+       "      <td>577</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>2 rows × 33 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "     ID  Year_Birth   Education Marital_Status   Income  Kidhome  Teenhome  \\\n",
+       "0  1826        1970  Graduation       Divorced  84835.0        0         0   \n",
+       "1     1        1961  Graduation         Single  57091.0        0         0   \n",
+       "\n",
+       "   Recency  MntWines  MntFruits  ...  AcceptedCmp2  Response  Complain  \\\n",
+       "0        0       189        104  ...             0         1         0   \n",
+       "1        0       464          5  ...             1         1         0   \n",
+       "\n",
+       "   Country  Day_Customer_Enroll  Month_Customer_Enroll  Year_Customer_Enroll  \\\n",
+       "0       SP                   16                      6                  2014   \n",
+       "1       CA                   15                      6                  2014   \n",
+       "\n",
+       "   Total_Children  Age  Total_Spending  \n",
+       "0               0   55            1190  \n",
+       "1               0   64             577  \n",
+       "\n",
+       "[2 rows x 33 columns]"
+      ]
+     },
+     "execution_count": 1435,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Dropping Age_Group, Kids_Group, and total_purchases_grp\n",
+    "columns_to_drop = ['Age_Group', 'Kids_Group', 'total_purchases_grp']\n",
+    "df.drop(columns=columns_to_drop, axis=1, inplace=True)\n",
+    "df.head(2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5f628b41-1725-4b5d-abd4-6793020b07ad",
+   "metadata": {},
+   "source": [
+    "#### **`Ordinal Encoding`** for Education Feature"
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1436,
    "id": "46c2c561-d654-4a16-8a9d-2788e52c0988",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "RangeIndex: 2240 entries, 0 to 2239\n",
+      "Data columns (total 33 columns):\n",
+      " #   Column                 Non-Null Count  Dtype  \n",
+      "---  ------                 --------------  -----  \n",
+      " 0   ID                     2240 non-null   int64  \n",
+      " 1   Year_Birth             2240 non-null   int64  \n",
+      " 2   Education              2240 non-null   object \n",
+      " 3   Marital_Status         2240 non-null   object \n",
+      " 4   Income                 2240 non-null   float64\n",
+      " 5   Kidhome                2240 non-null   int64  \n",
+      " 6   Teenhome               2240 non-null   int64  \n",
+      " 7   Recency                2240 non-null   int64  \n",
+      " 8   MntWines               2240 non-null   int64  \n",
+      " 9   MntFruits              2240 non-null   int64  \n",
+      " 10  MntMeatProducts        2240 non-null   int64  \n",
+      " 11  MntFishProducts        2240 non-null   int64  \n",
+      " 12  MntSweetProducts       2240 non-null   int64  \n",
+      " 13  MntGoldProds           2240 non-null   int64  \n",
+      " 14  NumDealsPurchases      2240 non-null   int64  \n",
+      " 15  NumWebPurchases        2240 non-null   int64  \n",
+      " 16  NumCatalogPurchases    2240 non-null   int64  \n",
+      " 17  NumStorePurchases      2240 non-null   int64  \n",
+      " 18  NumWebVisitsMonth      2240 non-null   int64  \n",
+      " 19  AcceptedCmp3           2240 non-null   int64  \n",
+      " 20  AcceptedCmp4           2240 non-null   int64  \n",
+      " 21  AcceptedCmp5           2240 non-null   int64  \n",
+      " 22  AcceptedCmp1           2240 non-null   int64  \n",
+      " 23  AcceptedCmp2           2240 non-null   int64  \n",
+      " 24  Response               2240 non-null   int64  \n",
+      " 25  Complain               2240 non-null   int64  \n",
+      " 26  Country                2240 non-null   object \n",
+      " 27  Day_Customer_Enroll    2240 non-null   int32  \n",
+      " 28  Month_Customer_Enroll  2240 non-null   int32  \n",
+      " 29  Year_Customer_Enroll   2240 non-null   int32  \n",
+      " 30  Total_Children         2240 non-null   int64  \n",
+      " 31  Age                    2240 non-null   int64  \n",
+      " 32  Total_Spending         2240 non-null   int64  \n",
+      "dtypes: float64(1), int32(3), int64(26), object(3)\n",
+      "memory usage: 551.4+ KB\n"
+     ]
+    }
+   ],
+   "source": [
+    "df.info()"
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1437,
    "id": "2534720a-1349-4085-b14e-c9e721887f7e",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array(['Graduation', 'PhD', '2n Cycle', 'Master', 'Basic'], dtype=object)"
+      ]
+     },
+     "execution_count": 1437,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df['Education'].unique()"
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1438,
+   "id": "c6199fb0-8fe9-464a-a28e-837e1b0218f3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from sklearn.preprocessing import OrdinalEncoder"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1439,
+   "id": "b531801c-45ca-4a48-a1b8-8d70a6238bae",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([2., 4., 1., 3., 0.])"
+      ]
+     },
+     "execution_count": 1439,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "categories = ['Basic', '2n Cycle', 'Graduation', 'Master', 'PhD']\n",
+    "# create an instance of OrdinalEncoder and \n",
+    "ordinal_encoder_education = OrdinalEncoder(categories=[categories])\n",
+    "\n",
+    "# applying fit_transform\n",
+    "df['Education_Encoded'] = ordinal_encoder_education.fit_transform(df[['Education']])\n",
+    "\n",
+    "#drop the education categorical feature\n",
+    "df.drop('Education', axis=1, inplace=True)\n",
+    "\n",
+    "# encoded unique values\n",
+    "df['Education_Encoded'].unique()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1440,
+   "id": "f4272e09-078f-402e-a791-6a286d9ec72f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>ID</th>\n",
+       "      <th>Year_Birth</th>\n",
+       "      <th>Marital_Status</th>\n",
+       "      <th>Income</th>\n",
+       "      <th>Kidhome</th>\n",
+       "      <th>Teenhome</th>\n",
+       "      <th>Recency</th>\n",
+       "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
+       "      <th>MntMeatProducts</th>\n",
+       "      <th>...</th>\n",
+       "      <th>Response</th>\n",
+       "      <th>Complain</th>\n",
+       "      <th>Country</th>\n",
+       "      <th>Day_Customer_Enroll</th>\n",
+       "      <th>Month_Customer_Enroll</th>\n",
+       "      <th>Year_Customer_Enroll</th>\n",
+       "      <th>Total_Children</th>\n",
+       "      <th>Age</th>\n",
+       "      <th>Total_Spending</th>\n",
+       "      <th>Education_Encoded</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1826</td>\n",
+       "      <td>1970</td>\n",
+       "      <td>Divorced</td>\n",
+       "      <td>84835.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>189</td>\n",
+       "      <td>104</td>\n",
+       "      <td>379</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>SP</td>\n",
+       "      <td>16</td>\n",
+       "      <td>6</td>\n",
+       "      <td>2014</td>\n",
+       "      <td>0</td>\n",
+       "      <td>55</td>\n",
+       "      <td>1190</td>\n",
+       "      <td>2.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1961</td>\n",
+       "      <td>Single</td>\n",
+       "      <td>57091.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>464</td>\n",
+       "      <td>5</td>\n",
+       "      <td>64</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>CA</td>\n",
+       "      <td>15</td>\n",
+       "      <td>6</td>\n",
+       "      <td>2014</td>\n",
+       "      <td>0</td>\n",
+       "      <td>64</td>\n",
+       "      <td>577</td>\n",
+       "      <td>2.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>10476</td>\n",
+       "      <td>1958</td>\n",
+       "      <td>Married</td>\n",
+       "      <td>67267.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>134</td>\n",
+       "      <td>11</td>\n",
+       "      <td>59</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>US</td>\n",
+       "      <td>13</td>\n",
+       "      <td>5</td>\n",
+       "      <td>2014</td>\n",
+       "      <td>1</td>\n",
+       "      <td>67</td>\n",
+       "      <td>251</td>\n",
+       "      <td>2.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1386</td>\n",
+       "      <td>1967</td>\n",
+       "      <td>Together</td>\n",
+       "      <td>32474.0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>10</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>AUS</td>\n",
+       "      <td>11</td>\n",
+       "      <td>5</td>\n",
+       "      <td>2014</td>\n",
+       "      <td>2</td>\n",
+       "      <td>58</td>\n",
+       "      <td>11</td>\n",
+       "      <td>2.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>5371</td>\n",
+       "      <td>1989</td>\n",
+       "      <td>Single</td>\n",
+       "      <td>21474.0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>6</td>\n",
+       "      <td>16</td>\n",
+       "      <td>24</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>SP</td>\n",
+       "      <td>8</td>\n",
+       "      <td>4</td>\n",
+       "      <td>2014</td>\n",
+       "      <td>1</td>\n",
+       "      <td>36</td>\n",
+       "      <td>91</td>\n",
+       "      <td>2.0</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 33 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "      ID  Year_Birth Marital_Status   Income  Kidhome  Teenhome  Recency  \\\n",
+       "0   1826        1970       Divorced  84835.0        0         0        0   \n",
+       "1      1        1961         Single  57091.0        0         0        0   \n",
+       "2  10476        1958        Married  67267.0        0         1        0   \n",
+       "3   1386        1967       Together  32474.0        1         1        0   \n",
+       "4   5371        1989         Single  21474.0        1         0        0   \n",
+       "\n",
+       "   MntWines  MntFruits  MntMeatProducts  ...  Response  Complain  Country  \\\n",
+       "0       189        104              379  ...         1         0       SP   \n",
+       "1       464          5               64  ...         1         0       CA   \n",
+       "2       134         11               59  ...         0         0       US   \n",
+       "3        10          0                1  ...         0         0      AUS   \n",
+       "4         6         16               24  ...         1         0       SP   \n",
+       "\n",
+       "   Day_Customer_Enroll  Month_Customer_Enroll  Year_Customer_Enroll  \\\n",
+       "0                   16                      6                  2014   \n",
+       "1                   15                      6                  2014   \n",
+       "2                   13                      5                  2014   \n",
+       "3                   11                      5                  2014   \n",
+       "4                    8                      4                  2014   \n",
+       "\n",
+       "   Total_Children  Age  Total_Spending  Education_Encoded  \n",
+       "0               0   55            1190                2.0  \n",
+       "1               0   64             577                2.0  \n",
+       "2               1   67             251                2.0  \n",
+       "3               2   58              11                2.0  \n",
+       "4               1   36              91                2.0  \n",
+       "\n",
+       "[5 rows x 33 columns]"
+      ]
+     },
+     "execution_count": 1440,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Education_encoded feature added to dataset\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1441,
+   "id": "d5e2fdee-504f-4046-81a3-24122a393226",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Basic: 0.0\n",
+      "2n Cycle: 1.0\n",
+      "Graduation: 2.0\n",
+      "Master: 3.0\n",
+      "PhD: 4.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# verify the uniue transformed data for each categories\n",
+    "# suppressing the warning. The below code is just for demonstrating the encoded value we got for each education category\n",
+    "warnings.filterwarnings(\"ignore\", category=UserWarning)\n",
+    "\n",
+    "for categ in categories:\n",
+    "    encoded_value = ordinal_encoder_education.transform([[categ]])\n",
+    "    print(f\"{categ}: {encoded_value[0][0]}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f6268e1f-ce43-48b8-a19c-d85e63f99ae0",
+   "metadata": {},
+   "source": [
+    "#### **`One Hot Encoding`** for Country"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1442,
    "id": "4e80f881-7fdc-4c39-af61-a831ef6ef0e5",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array(['SP', 'CA', 'US', 'AUS', 'GER', 'IND', 'SA', 'ME'], dtype=object)"
+      ]
+     },
+     "execution_count": 1442,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df['Country'].unique()"
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1443,
+   "id": "5d8bdf89-2c55-4729-9506-4af44fd35bb3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from sklearn.preprocessing import OneHotEncoder"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1444,
+   "id": "d711a77d-1d9f-4ab1-b320-94f516132073",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0., 0., 0., ..., 0., 1., 0.],\n",
+       "       [0., 1., 0., ..., 0., 0., 0.],\n",
+       "       [0., 0., 0., ..., 0., 0., 1.],\n",
+       "       ...,\n",
+       "       [0., 0., 0., ..., 0., 1., 0.],\n",
+       "       [0., 0., 0., ..., 0., 0., 0.],\n",
+       "       [0., 1., 0., ..., 0., 0., 0.]])"
+      ]
+     },
+     "execution_count": 1444,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#create an instance of One Hot Encoder\n",
+    "encoder = OneHotEncoder()\n",
+    "# fit and transform 'Country' column into one-hot encoded array\n",
+    "country_encoded = encoder.fit_transform(df[['Country']]).toarray()\n",
+    "country_encoded"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1445,
    "id": "727c74cc-b4e1-4457-82c1-ca7681f494f9",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Country_AUS</th>\n",
+       "      <th>Country_CA</th>\n",
+       "      <th>Country_GER</th>\n",
+       "      <th>Country_IND</th>\n",
+       "      <th>Country_ME</th>\n",
+       "      <th>Country_SA</th>\n",
+       "      <th>Country_SP</th>\n",
+       "      <th>Country_US</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   Country_AUS  Country_CA  Country_GER  Country_IND  Country_ME  Country_SA  \\\n",
+       "0          0.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "1          0.0         1.0          0.0          0.0         0.0         0.0   \n",
+       "2          0.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "3          1.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "4          0.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "\n",
+       "   Country_SP  Country_US  \n",
+       "0         1.0         0.0  \n",
+       "1         0.0         0.0  \n",
+       "2         0.0         1.0  \n",
+       "3         0.0         0.0  \n",
+       "4         1.0         0.0  "
+      ]
+     },
+     "execution_count": 1445,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#convert each encoded columns into data frame with each country features\n",
+    "encoded_country_df = pd.DataFrame(country_encoded, columns=encoder.get_feature_names_out())\n",
+    "encoded_country_df.head(5)"
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1446,
    "id": "feaa155e-0b7e-4790-84c1-c13c7650738f",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>ID</th>\n",
+       "      <th>Year_Birth</th>\n",
+       "      <th>Marital_Status</th>\n",
+       "      <th>Income</th>\n",
+       "      <th>Kidhome</th>\n",
+       "      <th>Teenhome</th>\n",
+       "      <th>Recency</th>\n",
+       "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
+       "      <th>MntMeatProducts</th>\n",
+       "      <th>...</th>\n",
+       "      <th>Total_Spending</th>\n",
+       "      <th>Education_Encoded</th>\n",
+       "      <th>Country_AUS</th>\n",
+       "      <th>Country_CA</th>\n",
+       "      <th>Country_GER</th>\n",
+       "      <th>Country_IND</th>\n",
+       "      <th>Country_ME</th>\n",
+       "      <th>Country_SA</th>\n",
+       "      <th>Country_SP</th>\n",
+       "      <th>Country_US</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1826</td>\n",
+       "      <td>1970</td>\n",
+       "      <td>Divorced</td>\n",
+       "      <td>84835.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>189</td>\n",
+       "      <td>104</td>\n",
+       "      <td>379</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1190</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1961</td>\n",
+       "      <td>Single</td>\n",
+       "      <td>57091.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>464</td>\n",
+       "      <td>5</td>\n",
+       "      <td>64</td>\n",
+       "      <td>...</td>\n",
+       "      <td>577</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>10476</td>\n",
+       "      <td>1958</td>\n",
+       "      <td>Married</td>\n",
+       "      <td>67267.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>134</td>\n",
+       "      <td>11</td>\n",
+       "      <td>59</td>\n",
+       "      <td>...</td>\n",
+       "      <td>251</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1386</td>\n",
+       "      <td>1967</td>\n",
+       "      <td>Together</td>\n",
+       "      <td>32474.0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>10</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>...</td>\n",
+       "      <td>11</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>5371</td>\n",
+       "      <td>1989</td>\n",
+       "      <td>Single</td>\n",
+       "      <td>21474.0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>6</td>\n",
+       "      <td>16</td>\n",
+       "      <td>24</td>\n",
+       "      <td>...</td>\n",
+       "      <td>91</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 40 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "      ID  Year_Birth Marital_Status   Income  Kidhome  Teenhome  Recency  \\\n",
+       "0   1826        1970       Divorced  84835.0        0         0        0   \n",
+       "1      1        1961         Single  57091.0        0         0        0   \n",
+       "2  10476        1958        Married  67267.0        0         1        0   \n",
+       "3   1386        1967       Together  32474.0        1         1        0   \n",
+       "4   5371        1989         Single  21474.0        1         0        0   \n",
+       "\n",
+       "   MntWines  MntFruits  MntMeatProducts  ...  Total_Spending  \\\n",
+       "0       189        104              379  ...            1190   \n",
+       "1       464          5               64  ...             577   \n",
+       "2       134         11               59  ...             251   \n",
+       "3        10          0                1  ...              11   \n",
+       "4         6         16               24  ...              91   \n",
+       "\n",
+       "   Education_Encoded  Country_AUS  Country_CA  Country_GER  Country_IND  \\\n",
+       "0                2.0          0.0         0.0          0.0          0.0   \n",
+       "1                2.0          0.0         1.0          0.0          0.0   \n",
+       "2                2.0          0.0         0.0          0.0          0.0   \n",
+       "3                2.0          1.0         0.0          0.0          0.0   \n",
+       "4                2.0          0.0         0.0          0.0          0.0   \n",
+       "\n",
+       "   Country_ME  Country_SA  Country_SP  Country_US  \n",
+       "0         0.0         0.0         1.0         0.0  \n",
+       "1         0.0         0.0         0.0         0.0  \n",
+       "2         0.0         0.0         0.0         1.0  \n",
+       "3         0.0         0.0         0.0         0.0  \n",
+       "4         0.0         0.0         1.0         0.0  \n",
+       "\n",
+       "[5 rows x 40 columns]"
+      ]
+     },
+     "execution_count": 1446,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#merge the original data with the enocded columns\n",
+    "df = pd.concat([df, encoded_country_df], axis=1)\n",
+    "#drop the categorical feature 'Country' after the encoded country features merged\n",
+    "df.drop('Country', axis=1, inplace=True)\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "28fa8f31-f39c-445f-b0f7-ea00588ea166",
+   "metadata": {},
+   "source": [
+    "#### **`Target Guided Ordinal encoding`** for Marital Status\n",
+    "#### `Target Guided Ordinal encoding` is a technique used to encode categorical variables based on their relationship with the target variable.\n",
+    "\n",
+    "#### In Target Guided Ordinal Encoding, we `replace each category in the categorical variable with a numerical value based on the mean or median of the target variable for that category`. This creates a monotonic relationship between the categorical variable and the target variable, which can improve our model's predication.\n",
+    "\n",
+    "#### Here in the dataset we will `perform the Target Guided Ordinal Encoding with the categorical Variable 'Marital Status' and Target Variable 'Total_Spending'`. We will get the mean of the 'Total Spending' for the group of 'Marital Status'. This will ensure a better model predication where the relationship of this 'Marital Status' category and Total Spending is retained."
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "83951004-59e8-4a19-ba0d-fa18fef43b48",
+   "execution_count": 1447,
+   "id": "ac683fc7-4a3a-4166-ad25-3077a18a88c4",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array(['Divorced', 'Single', 'Married', 'Together', 'Widow', 'YOLO',\n",
+       "       'Alone', 'Absurd'], dtype=object)"
+      ]
+     },
+     "execution_count": 1447,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df['Marital_Status'].unique()"
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "50c6a117-90d7-44e7-9860-8b6c96bcb334",
+   "execution_count": 1448,
+   "id": "b1c04105-a7f4-4e76-8459-ee4e8140aa70",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Marital_Status\n",
+       "Absurd      1192.5000\n",
+       "Alone        256.6667\n",
+       "Divorced     610.6293\n",
+       "Married      590.8021\n",
+       "Single       606.4833\n",
+       "Together     608.3879\n",
+       "Widow        738.8182\n",
+       "YOLO         424.0000\n",
+       "Name: Total_Spending, dtype: float64"
+      ]
+     },
+     "execution_count": 1448,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# mean of total spending grouped by marital status\n",
+    "mean_spending = df.groupby('Marital_Status')['Total_Spending'].mean().round(4)\n",
+    "mean_spending"
+   ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "63f6ffe3-b392-4980-81e5-9980b2410dab",
+   "execution_count": 1449,
+   "id": "49ba0dc1-44ce-406f-954b-cf4caa1ca41a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>ID</th>\n",
+       "      <th>Year_Birth</th>\n",
+       "      <th>Income</th>\n",
+       "      <th>Kidhome</th>\n",
+       "      <th>Teenhome</th>\n",
+       "      <th>Recency</th>\n",
+       "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
+       "      <th>MntMeatProducts</th>\n",
+       "      <th>MntFishProducts</th>\n",
+       "      <th>...</th>\n",
+       "      <th>Education_Encoded</th>\n",
+       "      <th>Country_AUS</th>\n",
+       "      <th>Country_CA</th>\n",
+       "      <th>Country_GER</th>\n",
+       "      <th>Country_IND</th>\n",
+       "      <th>Country_ME</th>\n",
+       "      <th>Country_SA</th>\n",
+       "      <th>Country_SP</th>\n",
+       "      <th>Country_US</th>\n",
+       "      <th>Marital_Status_Encoded</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1826</td>\n",
+       "      <td>1970</td>\n",
+       "      <td>84835.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>189</td>\n",
+       "      <td>104</td>\n",
+       "      <td>379</td>\n",
+       "      <td>111</td>\n",
+       "      <td>...</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>610.6293</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1961</td>\n",
+       "      <td>57091.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>464</td>\n",
+       "      <td>5</td>\n",
+       "      <td>64</td>\n",
+       "      <td>7</td>\n",
+       "      <td>...</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>606.4833</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>10476</td>\n",
+       "      <td>1958</td>\n",
+       "      <td>67267.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>134</td>\n",
+       "      <td>11</td>\n",
+       "      <td>59</td>\n",
+       "      <td>15</td>\n",
+       "      <td>...</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>590.8021</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1386</td>\n",
+       "      <td>1967</td>\n",
+       "      <td>32474.0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>10</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>...</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>608.3879</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>5371</td>\n",
+       "      <td>1989</td>\n",
+       "      <td>21474.0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>6</td>\n",
+       "      <td>16</td>\n",
+       "      <td>24</td>\n",
+       "      <td>11</td>\n",
+       "      <td>...</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>606.4833</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 40 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "      ID  Year_Birth   Income  Kidhome  Teenhome  Recency  MntWines  \\\n",
+       "0   1826        1970  84835.0        0         0        0       189   \n",
+       "1      1        1961  57091.0        0         0        0       464   \n",
+       "2  10476        1958  67267.0        0         1        0       134   \n",
+       "3   1386        1967  32474.0        1         1        0        10   \n",
+       "4   5371        1989  21474.0        1         0        0         6   \n",
+       "\n",
+       "   MntFruits  MntMeatProducts  MntFishProducts  ...  Education_Encoded  \\\n",
+       "0        104              379              111  ...                2.0   \n",
+       "1          5               64                7  ...                2.0   \n",
+       "2         11               59               15  ...                2.0   \n",
+       "3          0                1                0  ...                2.0   \n",
+       "4         16               24               11  ...                2.0   \n",
+       "\n",
+       "   Country_AUS  Country_CA  Country_GER  Country_IND  Country_ME  Country_SA  \\\n",
+       "0          0.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "1          0.0         1.0          0.0          0.0         0.0         0.0   \n",
+       "2          0.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "3          1.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "4          0.0         0.0          0.0          0.0         0.0         0.0   \n",
+       "\n",
+       "   Country_SP  Country_US  Marital_Status_Encoded  \n",
+       "0         1.0         0.0                610.6293  \n",
+       "1         0.0         0.0                606.4833  \n",
+       "2         0.0         1.0                590.8021  \n",
+       "3         0.0         0.0                608.3879  \n",
+       "4         1.0         0.0                606.4833  \n",
+       "\n",
+       "[5 rows x 40 columns]"
+      ]
+     },
+     "execution_count": 1449,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Marital Status encoded feature with mean of each group\n",
+    "df['Marital_Status_Encoded'] = df['Marital_Status'].map(mean_spending)\n",
+    "\n",
+    "#dropping categorical feature Marital_Status after encoding\n",
+    "df.drop('Marital_Status', axis=1, inplace=True)\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1450,
+   "id": "54015841-fe6b-430e-99dd-796df532e059",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "RangeIndex: 2240 entries, 0 to 2239\n",
+      "Data columns (total 40 columns):\n",
+      " #   Column                  Non-Null Count  Dtype  \n",
+      "---  ------                  --------------  -----  \n",
+      " 0   ID                      2240 non-null   int64  \n",
+      " 1   Year_Birth              2240 non-null   int64  \n",
+      " 2   Income                  2240 non-null   float64\n",
+      " 3   Kidhome                 2240 non-null   int64  \n",
+      " 4   Teenhome                2240 non-null   int64  \n",
+      " 5   Recency                 2240 non-null   int64  \n",
+      " 6   MntWines                2240 non-null   int64  \n",
+      " 7   MntFruits               2240 non-null   int64  \n",
+      " 8   MntMeatProducts         2240 non-null   int64  \n",
+      " 9   MntFishProducts         2240 non-null   int64  \n",
+      " 10  MntSweetProducts        2240 non-null   int64  \n",
+      " 11  MntGoldProds            2240 non-null   int64  \n",
+      " 12  NumDealsPurchases       2240 non-null   int64  \n",
+      " 13  NumWebPurchases         2240 non-null   int64  \n",
+      " 14  NumCatalogPurchases     2240 non-null   int64  \n",
+      " 15  NumStorePurchases       2240 non-null   int64  \n",
+      " 16  NumWebVisitsMonth       2240 non-null   int64  \n",
+      " 17  AcceptedCmp3            2240 non-null   int64  \n",
+      " 18  AcceptedCmp4            2240 non-null   int64  \n",
+      " 19  AcceptedCmp5            2240 non-null   int64  \n",
+      " 20  AcceptedCmp1            2240 non-null   int64  \n",
+      " 21  AcceptedCmp2            2240 non-null   int64  \n",
+      " 22  Response                2240 non-null   int64  \n",
+      " 23  Complain                2240 non-null   int64  \n",
+      " 24  Day_Customer_Enroll     2240 non-null   int32  \n",
+      " 25  Month_Customer_Enroll   2240 non-null   int32  \n",
+      " 26  Year_Customer_Enroll    2240 non-null   int32  \n",
+      " 27  Total_Children          2240 non-null   int64  \n",
+      " 28  Age                     2240 non-null   int64  \n",
+      " 29  Total_Spending          2240 non-null   int64  \n",
+      " 30  Education_Encoded       2240 non-null   float64\n",
+      " 31  Country_AUS             2240 non-null   float64\n",
+      " 32  Country_CA              2240 non-null   float64\n",
+      " 33  Country_GER             2240 non-null   float64\n",
+      " 34  Country_IND             2240 non-null   float64\n",
+      " 35  Country_ME              2240 non-null   float64\n",
+      " 36  Country_SA              2240 non-null   float64\n",
+      " 37  Country_SP              2240 non-null   float64\n",
+      " 38  Country_US              2240 non-null   float64\n",
+      " 39  Marital_Status_Encoded  2240 non-null   float64\n",
+      "dtypes: float64(11), int32(3), int64(26)\n",
+      "memory usage: 673.9 KB\n"
+     ]
+    }
+   ],
+   "source": [
+    "# All the categorical features encoded into numerical\n",
+    "df.info()"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "id": "314a7df9-8fff-4f2d-8b68-748d21cf6c85",
+   "metadata": {},
+   "source": [
+    "### Normalization / Standardization\n",
+    "\n",
+    "#### **`Normalization for Income`** : Performing normalization for Income feature, as Income is expected to have bounded range and would follow normal ditribution with less variance. `Normalization will scale the values to range [0 to 1]`\n",
+    "\n",
+    "#### **`Standardization for Total Spending and Amount spent on items`**: The features, MntWines, MntFruits, MntMeatProducts, MntFishProducts, MntSweetProducts, MntGoldProds and Total Spending may vary widely and would not follow a normal ditribution so Standardization here centers the ditribution around their mean`(mean of 0)` and scales them to unit variance`(standard deviation of 1)`, ensuring consistency."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ca590ad3-887b-4e4a-8ebf-9a3d6abeb462",
+   "metadata": {},
+   "source": [
+    "#### Normalization : Income Feature"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1451,
+   "id": "bad15e41-b5be-46aa-ab83-bf61dbc03b82",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Income</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>84835.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>57091.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>67267.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>32474.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>21474.0</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "    Income\n",
+       "0  84835.0\n",
+       "1  57091.0\n",
+       "2  67267.0\n",
+       "3  32474.0\n",
+       "4  21474.0"
+      ]
+     },
+     "execution_count": 1451,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df[['Income']].head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1452,
+   "id": "ca687dce-5362-42db-9b3f-6d255f7710c1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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",
+      "text/plain": [
+       "<Figure size 640x480 with 1 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "# Plotting Histogram of Income shows bell curve with slightly postive skewed\n",
+    "plt.title(\"Histogram for Income\")\n",
+    "sns.histplot(data=df, x='Income', kde=True)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1453,
+   "id": "5ef330fd-2f25-43da-9517-b0ecce49ff50",
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "from sklearn.preprocessing import MinMaxScaler"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1454,
+   "id": "10feb689-c17e-4306-abab-92f952cdd528",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>ID</th>\n",
+       "      <th>Year_Birth</th>\n",
+       "      <th>Kidhome</th>\n",
+       "      <th>Teenhome</th>\n",
+       "      <th>Recency</th>\n",
+       "      <th>MntWines</th>\n",
+       "      <th>MntFruits</th>\n",
+       "      <th>MntMeatProducts</th>\n",
+       "      <th>MntFishProducts</th>\n",
+       "      <th>MntSweetProducts</th>\n",
+       "      <th>...</th>\n",
+       "      <th>Country_AUS</th>\n",
+       "      <th>Country_CA</th>\n",
+       "      <th>Country_GER</th>\n",
+       "      <th>Country_IND</th>\n",
+       "      <th>Country_ME</th>\n",
+       "      <th>Country_SA</th>\n",
+       "      <th>Country_SP</th>\n",
+       "      <th>Country_US</th>\n",
+       "      <th>Marital_Status_Encoded</th>\n",
+       "      <th>Income_Normalized</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1826</td>\n",
+       "      <td>1970</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>189</td>\n",
+       "      <td>104</td>\n",
+       "      <td>379</td>\n",
+       "      <td>111</td>\n",
+       "      <td>189</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>610.6293</td>\n",
+       "      <td>0.1250</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1961</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>464</td>\n",
+       "      <td>5</td>\n",
+       "      <td>64</td>\n",
+       "      <td>7</td>\n",
+       "      <td>0</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>606.4833</td>\n",
+       "      <td>0.0833</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>10476</td>\n",
+       "      <td>1958</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>134</td>\n",
+       "      <td>11</td>\n",
+       "      <td>59</td>\n",
+       "      <td>15</td>\n",
+       "      <td>2</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>590.8021</td>\n",
+       "      <td>0.0986</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1386</td>\n",
+       "      <td>1967</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>10</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>608.3879</td>\n",
+       "      <td>0.0462</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>5371</td>\n",
+       "      <td>1989</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>6</td>\n",
+       "      <td>16</td>\n",
+       "      <td>24</td>\n",
+       "      <td>11</td>\n",
+       "      <td>0</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>606.4833</td>\n",
+       "      <td>0.0297</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 40 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "      ID  Year_Birth  Kidhome  Teenhome  Recency  MntWines  MntFruits  \\\n",
+       "0   1826        1970        0         0        0       189        104   \n",
+       "1      1        1961        0         0        0       464          5   \n",
+       "2  10476        1958        0         1        0       134         11   \n",
+       "3   1386        1967        1         1        0        10          0   \n",
+       "4   5371        1989        1         0        0         6         16   \n",
+       "\n",
+       "   MntMeatProducts  MntFishProducts  MntSweetProducts  ...  Country_AUS  \\\n",
+       "0              379              111               189  ...          0.0   \n",
+       "1               64                7                 0  ...          0.0   \n",
+       "2               59               15                 2  ...          0.0   \n",
+       "3                1                0                 0  ...          1.0   \n",
+       "4               24               11                 0  ...          0.0   \n",
+       "\n",
+       "   Country_CA  Country_GER  Country_IND  Country_ME  Country_SA  Country_SP  \\\n",
+       "0         0.0          0.0          0.0         0.0         0.0         1.0   \n",
+       "1         1.0          0.0          0.0         0.0         0.0         0.0   \n",
+       "2         0.0          0.0          0.0         0.0         0.0         0.0   \n",
+       "3         0.0          0.0          0.0         0.0         0.0         0.0   \n",
+       "4         0.0          0.0          0.0         0.0         0.0         1.0   \n",
+       "\n",
+       "   Country_US  Marital_Status_Encoded  Income_Normalized  \n",
+       "0         0.0                610.6293             0.1250  \n",
+       "1         0.0                606.4833             0.0833  \n",
+       "2         1.0                590.8021             0.0986  \n",
+       "3         0.0                608.3879             0.0462  \n",
+       "4         0.0                606.4833             0.0297  \n",
+       "\n",
+       "[5 rows x 40 columns]"
+      ]
+     },
+     "execution_count": 1454,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# initializae MinMaxScaler\n",
+    "scaler = MinMaxScaler()\n",
+    "\n",
+    "#Normalize income fe and add it to the datframe\n",
+    "df['Income_Normalized'] = scaler.fit_transform(df[['Income']]).round(4)\n",
+    "\n",
+    "#dropping original income feature\n",
+    "df.drop('Income', axis=1, inplace=True)\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c8698a7-7877-4eb1-bd10-7f42f3b41984",
+   "metadata": {},
+   "source": [
+    "#### Standardization : Total Spending and Amount Spent on Items Features"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1455,
+   "id": "66817c5b-03e3-4567-b214-f4ecd2f06e62",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from sklearn.preprocessing import StandardScaler"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1456,
+   "id": "e86b6184-f28b-4456-a3f0-086c29379f8b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Total_Spending_Standardized</th>\n",
+       "      <th>MntWines_Standardized</th>\n",
+       "      <th>MntFruits_Standardized</th>\n",
+       "      <th>MntMeatProducts_Standardized</th>\n",
+       "      <th>MntFishProducts_Standardized</th>\n",
+       "      <th>MntSweetProducts_Standardized</th>\n",
+       "      <th>MntGoldProds_Standardized</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>0.9702</td>\n",
+       "      <td>-0.3415</td>\n",
+       "      <td>1.9539</td>\n",
+       "      <td>0.9397</td>\n",
+       "      <td>1.3453</td>\n",
+       "      <td>3.9237</td>\n",
+       "      <td>3.3357</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>-0.0478</td>\n",
+       "      <td>0.4756</td>\n",
+       "      <td>-0.5357</td>\n",
+       "      <td>-0.4562</td>\n",
+       "      <td>-0.5589</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.1346</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>-0.5893</td>\n",
+       "      <td>-0.5050</td>\n",
+       "      <td>-0.3848</td>\n",
+       "      <td>-0.4784</td>\n",
+       "      <td>-0.4124</td>\n",
+       "      <td>-0.6073</td>\n",
+       "      <td>-0.2688</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>-0.9878</td>\n",
+       "      <td>-0.8735</td>\n",
+       "      <td>-0.6614</td>\n",
+       "      <td>-0.7354</td>\n",
+       "      <td>-0.6871</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.8440</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>-0.8550</td>\n",
+       "      <td>-0.8853</td>\n",
+       "      <td>-0.2591</td>\n",
+       "      <td>-0.6335</td>\n",
+       "      <td>-0.4857</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.1922</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   Total_Spending_Standardized  MntWines_Standardized  MntFruits_Standardized  \\\n",
+       "0                       0.9702                -0.3415                  1.9539   \n",
+       "1                      -0.0478                 0.4756                 -0.5357   \n",
+       "2                      -0.5893                -0.5050                 -0.3848   \n",
+       "3                      -0.9878                -0.8735                 -0.6614   \n",
+       "4                      -0.8550                -0.8853                 -0.2591   \n",
+       "\n",
+       "   MntMeatProducts_Standardized  MntFishProducts_Standardized  \\\n",
+       "0                        0.9397                        1.3453   \n",
+       "1                       -0.4562                       -0.5589   \n",
+       "2                       -0.4784                       -0.4124   \n",
+       "3                       -0.7354                       -0.6871   \n",
+       "4                       -0.6335                       -0.4857   \n",
+       "\n",
+       "   MntSweetProducts_Standardized  MntGoldProds_Standardized  \n",
+       "0                         3.9237                     3.3357  \n",
+       "1                        -0.6557                    -0.1346  \n",
+       "2                        -0.6073                    -0.2688  \n",
+       "3                        -0.6557                    -0.8440  \n",
+       "4                        -0.6557                    -0.1922  "
+      ]
+     },
+     "execution_count": 1456,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "columns_to_standardize = ['Total_Spending', 'MntWines', 'MntFruits', 'MntMeatProducts',\n",
+    "                       'MntFishProducts', 'MntSweetProducts', 'MntGoldProds']\n",
+    "\n",
+    "#initialize Standard scaler\n",
+    "scaler = StandardScaler()\n",
+    "\n",
+    "#standardize columns\n",
+    "standardized_data = scaler.fit_transform(df[columns_to_standardize]).round(4)\n",
+    "standardized_df = pd.DataFrame(standardized_data, columns=[f\"{col}_Standardized\" for col in columns_to_standardize])\n",
+    "standardized_df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1457,
+   "id": "6605f730-64dc-4f0d-8abb-6b7ca7a215f8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>ID</th>\n",
+       "      <th>Year_Birth</th>\n",
+       "      <th>Kidhome</th>\n",
+       "      <th>Teenhome</th>\n",
+       "      <th>Recency</th>\n",
+       "      <th>NumDealsPurchases</th>\n",
+       "      <th>NumWebPurchases</th>\n",
+       "      <th>NumCatalogPurchases</th>\n",
+       "      <th>NumStorePurchases</th>\n",
+       "      <th>NumWebVisitsMonth</th>\n",
+       "      <th>...</th>\n",
+       "      <th>Country_US</th>\n",
+       "      <th>Marital_Status_Encoded</th>\n",
+       "      <th>Income_Normalized</th>\n",
+       "      <th>Total_Spending_Standardized</th>\n",
+       "      <th>MntWines_Standardized</th>\n",
+       "      <th>MntFruits_Standardized</th>\n",
+       "      <th>MntMeatProducts_Standardized</th>\n",
+       "      <th>MntFishProducts_Standardized</th>\n",
+       "      <th>MntSweetProducts_Standardized</th>\n",
+       "      <th>MntGoldProds_Standardized</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1826</td>\n",
+       "      <td>1970</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>4</td>\n",
+       "      <td>4</td>\n",
+       "      <td>6</td>\n",
+       "      <td>1</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>610.6293</td>\n",
+       "      <td>0.1250</td>\n",
+       "      <td>0.9702</td>\n",
+       "      <td>-0.3415</td>\n",
+       "      <td>1.9539</td>\n",
+       "      <td>0.9397</td>\n",
+       "      <td>1.3453</td>\n",
+       "      <td>3.9237</td>\n",
+       "      <td>3.3357</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1961</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>7</td>\n",
+       "      <td>3</td>\n",
+       "      <td>7</td>\n",
+       "      <td>5</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>606.4833</td>\n",
+       "      <td>0.0833</td>\n",
+       "      <td>-0.0478</td>\n",
+       "      <td>0.4756</td>\n",
+       "      <td>-0.5357</td>\n",
+       "      <td>-0.4562</td>\n",
+       "      <td>-0.5589</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.1346</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>10476</td>\n",
+       "      <td>1958</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>3</td>\n",
+       "      <td>2</td>\n",
+       "      <td>5</td>\n",
+       "      <td>2</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>590.8021</td>\n",
+       "      <td>0.0986</td>\n",
+       "      <td>-0.5893</td>\n",
+       "      <td>-0.5050</td>\n",
+       "      <td>-0.3848</td>\n",
+       "      <td>-0.4784</td>\n",
+       "      <td>-0.4124</td>\n",
+       "      <td>-0.6073</td>\n",
+       "      <td>-0.2688</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1386</td>\n",
+       "      <td>1967</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2</td>\n",
+       "      <td>7</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>608.3879</td>\n",
+       "      <td>0.0462</td>\n",
+       "      <td>-0.9878</td>\n",
+       "      <td>-0.8735</td>\n",
+       "      <td>-0.6614</td>\n",
+       "      <td>-0.7354</td>\n",
+       "      <td>-0.6871</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.8440</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>5371</td>\n",
+       "      <td>1989</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2</td>\n",
+       "      <td>3</td>\n",
+       "      <td>1</td>\n",
+       "      <td>2</td>\n",
+       "      <td>7</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>606.4833</td>\n",
+       "      <td>0.0297</td>\n",
+       "      <td>-0.8550</td>\n",
+       "      <td>-0.8853</td>\n",
+       "      <td>-0.2591</td>\n",
+       "      <td>-0.6335</td>\n",
+       "      <td>-0.4857</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.1922</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 40 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "      ID  Year_Birth  Kidhome  Teenhome  Recency  NumDealsPurchases  \\\n",
+       "0   1826        1970        0         0        0                  1   \n",
+       "1      1        1961        0         0        0                  1   \n",
+       "2  10476        1958        0         1        0                  1   \n",
+       "3   1386        1967        1         1        0                  1   \n",
+       "4   5371        1989        1         0        0                  2   \n",
+       "\n",
+       "   NumWebPurchases  NumCatalogPurchases  NumStorePurchases  NumWebVisitsMonth  \\\n",
+       "0                4                    4                  6                  1   \n",
+       "1                7                    3                  7                  5   \n",
+       "2                3                    2                  5                  2   \n",
+       "3                1                    0                  2                  7   \n",
+       "4                3                    1                  2                  7   \n",
+       "\n",
+       "   ...  Country_US  Marital_Status_Encoded  Income_Normalized  \\\n",
+       "0  ...         0.0                610.6293             0.1250   \n",
+       "1  ...         0.0                606.4833             0.0833   \n",
+       "2  ...         1.0                590.8021             0.0986   \n",
+       "3  ...         0.0                608.3879             0.0462   \n",
+       "4  ...         0.0                606.4833             0.0297   \n",
+       "\n",
+       "   Total_Spending_Standardized  MntWines_Standardized  MntFruits_Standardized  \\\n",
+       "0                       0.9702                -0.3415                  1.9539   \n",
+       "1                      -0.0478                 0.4756                 -0.5357   \n",
+       "2                      -0.5893                -0.5050                 -0.3848   \n",
+       "3                      -0.9878                -0.8735                 -0.6614   \n",
+       "4                      -0.8550                -0.8853                 -0.2591   \n",
+       "\n",
+       "   MntMeatProducts_Standardized  MntFishProducts_Standardized  \\\n",
+       "0                        0.9397                        1.3453   \n",
+       "1                       -0.4562                       -0.5589   \n",
+       "2                       -0.4784                       -0.4124   \n",
+       "3                       -0.7354                       -0.6871   \n",
+       "4                       -0.6335                       -0.4857   \n",
+       "\n",
+       "   MntSweetProducts_Standardized  MntGoldProds_Standardized  \n",
+       "0                         3.9237                     3.3357  \n",
+       "1                        -0.6557                    -0.1346  \n",
+       "2                        -0.6073                    -0.2688  \n",
+       "3                        -0.6557                    -0.8440  \n",
+       "4                        -0.6557                    -0.1922  \n",
+       "\n",
+       "[5 rows x 40 columns]"
+      ]
+     },
+     "execution_count": 1457,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#add new standardized df to the original df\n",
+    "df = pd.concat([df, standardized_df], axis=1)\n",
+    "# drop original items spending features\n",
+    "df.drop(columns=columns_to_standardize, inplace=True)\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "48d4554a-78f4-4250-be1d-9f0f2711bd9c",
+   "metadata": {},
+   "source": [
+    "#### Note: Perfoming `Standardization` on feature **`Marital_Status_Encoded`** as the Encoded mean value for Marital_Status is large and would affect the perormance during model training"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1458,
+   "id": "3ced33c7-7953-4402-876f-c113b60b75e6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>ID</th>\n",
+       "      <th>Year_Birth</th>\n",
+       "      <th>Kidhome</th>\n",
+       "      <th>Teenhome</th>\n",
+       "      <th>Recency</th>\n",
+       "      <th>NumDealsPurchases</th>\n",
+       "      <th>NumWebPurchases</th>\n",
+       "      <th>NumCatalogPurchases</th>\n",
+       "      <th>NumStorePurchases</th>\n",
+       "      <th>NumWebVisitsMonth</th>\n",
+       "      <th>...</th>\n",
+       "      <th>Country_US</th>\n",
+       "      <th>Income_Normalized</th>\n",
+       "      <th>Total_Spending_Standardized</th>\n",
+       "      <th>MntWines_Standardized</th>\n",
+       "      <th>MntFruits_Standardized</th>\n",
+       "      <th>MntMeatProducts_Standardized</th>\n",
+       "      <th>MntFishProducts_Standardized</th>\n",
+       "      <th>MntSweetProducts_Standardized</th>\n",
+       "      <th>MntGoldProds_Standardized</th>\n",
+       "      <th>Marital_Status_Standardized</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1826</td>\n",
+       "      <td>1970</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>4</td>\n",
+       "      <td>4</td>\n",
+       "      <td>6</td>\n",
+       "      <td>1</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.1250</td>\n",
+       "      <td>0.9702</td>\n",
+       "      <td>-0.3415</td>\n",
+       "      <td>1.9539</td>\n",
+       "      <td>0.9397</td>\n",
+       "      <td>1.3453</td>\n",
+       "      <td>3.9237</td>\n",
+       "      <td>3.3357</td>\n",
+       "      <td>0.1395</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>1961</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>7</td>\n",
+       "      <td>3</td>\n",
+       "      <td>7</td>\n",
+       "      <td>5</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0833</td>\n",
+       "      <td>-0.0478</td>\n",
+       "      <td>0.4756</td>\n",
+       "      <td>-0.5357</td>\n",
+       "      <td>-0.4562</td>\n",
+       "      <td>-0.5589</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.1346</td>\n",
+       "      <td>0.0198</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>10476</td>\n",
+       "      <td>1958</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>3</td>\n",
+       "      <td>2</td>\n",
+       "      <td>5</td>\n",
+       "      <td>2</td>\n",
+       "      <td>...</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0986</td>\n",
+       "      <td>-0.5893</td>\n",
+       "      <td>-0.5050</td>\n",
+       "      <td>-0.3848</td>\n",
+       "      <td>-0.4784</td>\n",
+       "      <td>-0.4124</td>\n",
+       "      <td>-0.6073</td>\n",
+       "      <td>-0.2688</td>\n",
+       "      <td>-0.4330</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1386</td>\n",
+       "      <td>1967</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2</td>\n",
+       "      <td>7</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0462</td>\n",
+       "      <td>-0.9878</td>\n",
+       "      <td>-0.8735</td>\n",
+       "      <td>-0.6614</td>\n",
+       "      <td>-0.7354</td>\n",
+       "      <td>-0.6871</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.8440</td>\n",
+       "      <td>0.0748</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>5371</td>\n",
+       "      <td>1989</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2</td>\n",
+       "      <td>3</td>\n",
+       "      <td>1</td>\n",
+       "      <td>2</td>\n",
+       "      <td>7</td>\n",
+       "      <td>...</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>0.0297</td>\n",
+       "      <td>-0.8550</td>\n",
+       "      <td>-0.8853</td>\n",
+       "      <td>-0.2591</td>\n",
+       "      <td>-0.6335</td>\n",
+       "      <td>-0.4857</td>\n",
+       "      <td>-0.6557</td>\n",
+       "      <td>-0.1922</td>\n",
+       "      <td>0.0198</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 40 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "      ID  Year_Birth  Kidhome  Teenhome  Recency  NumDealsPurchases  \\\n",
+       "0   1826        1970        0         0        0                  1   \n",
+       "1      1        1961        0         0        0                  1   \n",
+       "2  10476        1958        0         1        0                  1   \n",
+       "3   1386        1967        1         1        0                  1   \n",
+       "4   5371        1989        1         0        0                  2   \n",
+       "\n",
+       "   NumWebPurchases  NumCatalogPurchases  NumStorePurchases  NumWebVisitsMonth  \\\n",
+       "0                4                    4                  6                  1   \n",
+       "1                7                    3                  7                  5   \n",
+       "2                3                    2                  5                  2   \n",
+       "3                1                    0                  2                  7   \n",
+       "4                3                    1                  2                  7   \n",
+       "\n",
+       "   ...  Country_US  Income_Normalized  Total_Spending_Standardized  \\\n",
+       "0  ...         0.0             0.1250                       0.9702   \n",
+       "1  ...         0.0             0.0833                      -0.0478   \n",
+       "2  ...         1.0             0.0986                      -0.5893   \n",
+       "3  ...         0.0             0.0462                      -0.9878   \n",
+       "4  ...         0.0             0.0297                      -0.8550   \n",
+       "\n",
+       "   MntWines_Standardized  MntFruits_Standardized  \\\n",
+       "0                -0.3415                  1.9539   \n",
+       "1                 0.4756                 -0.5357   \n",
+       "2                -0.5050                 -0.3848   \n",
+       "3                -0.8735                 -0.6614   \n",
+       "4                -0.8853                 -0.2591   \n",
+       "\n",
+       "   MntMeatProducts_Standardized  MntFishProducts_Standardized  \\\n",
+       "0                        0.9397                        1.3453   \n",
+       "1                       -0.4562                       -0.5589   \n",
+       "2                       -0.4784                       -0.4124   \n",
+       "3                       -0.7354                       -0.6871   \n",
+       "4                       -0.6335                       -0.4857   \n",
+       "\n",
+       "   MntSweetProducts_Standardized  MntGoldProds_Standardized  \\\n",
+       "0                         3.9237                     3.3357   \n",
+       "1                        -0.6557                    -0.1346   \n",
+       "2                        -0.6073                    -0.2688   \n",
+       "3                        -0.6557                    -0.8440   \n",
+       "4                        -0.6557                    -0.1922   \n",
+       "\n",
+       "   Marital_Status_Standardized  \n",
+       "0                       0.1395  \n",
+       "1                       0.0198  \n",
+       "2                      -0.4330  \n",
+       "3                       0.0748  \n",
+       "4                       0.0198  \n",
+       "\n",
+       "[5 rows x 40 columns]"
+      ]
+     },
+     "execution_count": 1458,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scaler = StandardScaler()\n",
+    "df['Marital_Status_Standardized'] = scaler.fit_transform(df[['Marital_Status_Encoded']]).round(4)\n",
+    "df.drop(columns=['Marital_Status_Encoded'], axis=1, inplace=True)\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1459,
+   "id": "a4f42558-4855-468e-8fe1-b3126a58e240",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "RangeIndex: 2240 entries, 0 to 2239\n",
+      "Data columns (total 40 columns):\n",
+      " #   Column                         Non-Null Count  Dtype  \n",
+      "---  ------                         --------------  -----  \n",
+      " 0   ID                             2240 non-null   int64  \n",
+      " 1   Year_Birth                     2240 non-null   int64  \n",
+      " 2   Kidhome                        2240 non-null   int64  \n",
+      " 3   Teenhome                       2240 non-null   int64  \n",
+      " 4   Recency                        2240 non-null   int64  \n",
+      " 5   NumDealsPurchases              2240 non-null   int64  \n",
+      " 6   NumWebPurchases                2240 non-null   int64  \n",
+      " 7   NumCatalogPurchases            2240 non-null   int64  \n",
+      " 8   NumStorePurchases              2240 non-null   int64  \n",
+      " 9   NumWebVisitsMonth              2240 non-null   int64  \n",
+      " 10  AcceptedCmp3                   2240 non-null   int64  \n",
+      " 11  AcceptedCmp4                   2240 non-null   int64  \n",
+      " 12  AcceptedCmp5                   2240 non-null   int64  \n",
+      " 13  AcceptedCmp1                   2240 non-null   int64  \n",
+      " 14  AcceptedCmp2                   2240 non-null   int64  \n",
+      " 15  Response                       2240 non-null   int64  \n",
+      " 16  Complain                       2240 non-null   int64  \n",
+      " 17  Day_Customer_Enroll            2240 non-null   int32  \n",
+      " 18  Month_Customer_Enroll          2240 non-null   int32  \n",
+      " 19  Year_Customer_Enroll           2240 non-null   int32  \n",
+      " 20  Total_Children                 2240 non-null   int64  \n",
+      " 21  Age                            2240 non-null   int64  \n",
+      " 22  Education_Encoded              2240 non-null   float64\n",
+      " 23  Country_AUS                    2240 non-null   float64\n",
+      " 24  Country_CA                     2240 non-null   float64\n",
+      " 25  Country_GER                    2240 non-null   float64\n",
+      " 26  Country_IND                    2240 non-null   float64\n",
+      " 27  Country_ME                     2240 non-null   float64\n",
+      " 28  Country_SA                     2240 non-null   float64\n",
+      " 29  Country_SP                     2240 non-null   float64\n",
+      " 30  Country_US                     2240 non-null   float64\n",
+      " 31  Income_Normalized              2240 non-null   float64\n",
+      " 32  Total_Spending_Standardized    2240 non-null   float64\n",
+      " 33  MntWines_Standardized          2240 non-null   float64\n",
+      " 34  MntFruits_Standardized         2240 non-null   float64\n",
+      " 35  MntMeatProducts_Standardized   2240 non-null   float64\n",
+      " 36  MntFishProducts_Standardized   2240 non-null   float64\n",
+      " 37  MntSweetProducts_Standardized  2240 non-null   float64\n",
+      " 38  MntGoldProds_Standardized      2240 non-null   float64\n",
+      " 39  Marital_Status_Standardized    2240 non-null   float64\n",
+      "dtypes: float64(18), int32(3), int64(19)\n",
+      "memory usage: 673.9 KB\n"
+     ]
+    }
+   ],
+   "source": [
+    "df.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1460,
+   "id": "39742ced-8e7f-47a5-b020-6b8fb4660cf3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Saving the final dataset after Cleaning, Feature Engineering(Encoding, Normalizing and Standardizing)\n",
+    "# the relvant features for model training\n",
+    "\n",
+    "#  Save file in csv\n",
+    "df.to_csv('marketing_data_final.csv', index=False)\n",
+    "\n",
+    "# Save file in pickle(pkl) for faster loading in python for model training\n",
+    "df.to_pickle('marketing_data_final.pkl')"
+   ]
   }
  ],
  "metadata": {
