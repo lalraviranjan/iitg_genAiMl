@@ -1,7 +1,13 @@
 pandas
 ipykernel
 notebook
-bcrypt
-flask
-fastapi
-uvicorn
+seaborn
+scikit-learn
+imblearn
+matplotlib
+jupyter_contrib_nbextensions
+nbconvert
+plotly
+altair
+pytest
+statsmodels
