@@ -1,0 +1,100 @@
+Disease/Infection/Virus,Fever,Cough/Cold,Fatigue,Difficulty Breathing,Body Pain,Main Symptoms,     Age,Gender,Blood Pressure,Cholesterol Level,Outcome Variable
+Covid19,Yes,Yes,Yes,Yes,Yes,Loss of smell and taste,57,Male,High,High,Positive
+Influenza,Yes,Yes,Yes,Yes,Yes,Diarrhea and Vomiting,26,Male,Normal,Normal,Positive
+Migrane,No,Yes,No,No,No,Headaches/Light and Sound Sensitive,30,Female,Normal,Normal,Psitive
+Diabetes,Yes,No,Yes,No,No,Increased Thirst and Frequent Urination,50,Female,Low,Low,Positive
+ChickenPox,Yes,No,Yes,No,Yes,Raised Bumps(Papules),15,Male,High,Normal,Positive
+MoneyPox,Yes,Yes,Yes,Yes,Yes,Raised Bumps(Papules),7,Male,Normal,Normal,Positive
+Dengue,Yes,Yes,Yes,No,Yes,Mild Bleeding(Mouth/Nose),12,Male,Normal,Normal,Positive
+Pneumonia,Yes,Yes,Yes,Yes,Yes,Cough with Mucus,65,Female,High,High,Positive
+Hepatitis,Yes,No,Yes,No,Yes,Loss of Appetite/Diarrhea and Vomiting,30,Male,Normal,Low,Positive
+Diptheria,Yes,Yes,Yes,Yes,No,Grey Membrane covering throat and tonsils,3,Male,Normal,Normal,Positive
+Asthma,No,Yes,No,Yes,No,Chest Tightness,53,Female,High,Low,Negative
+Brain Tumor,No,No,No,No,Yes,Headaches Pain Severe/Blurred Vision/Limbs weak,67,Female,Low,High,Positive
+Malaria,Yes,Yes,Yes,Yes,Yes,Diarrhea and Vomiting/Nausea,32,Male,Normal,High,Negative
+Conjunctivits,No,Yes,No,No,No,"Redness,Itchiness,Puffy eyes",12,Female,Normal,Normal,Positive
+Spina Bifida,No,No,No,No,No,Not Develop Spinal Cord Properly,2,Female,Normal,Normal,Positive
+Psoariasis,No,No,No,No,Yes,Joint Pain,47,Female,Normal,Normal,Negative
+Influenza,Yes,Yes,No,No,No,No,11,Female,Normal,Normal,Negative
+Migrane,Yes,No,No,No,No,No,18,Male,Normal,Normal,Negative
+Diabetes,Yes,No,Yes,No,No,No,10,Female,Normal,Normal,Negative
+ChickenPox,Yes,No,Yes,No,Yes,Raised Bumps(Papules),11,Male,Normal,Normal,Positive
+MoneyPox,No,No,No,No,No,No,,Male,Normal,Normal,Negative
+Dengue,Yes,Yes,Yes,No,Yes,Mild Bleeding(Mouth/Nose),19,Female,Normal,Normal,Positive
+Pnemonia,No,No,No,No,No,No,20,Male,Normal,Normal,Negative
+Hepatitis,Yes,No,Yes,No,Yes,Loss of Appetite/Diarrhea and Vomiting,,Male,Low,High,Positive
+Diptheria,Yes,Yes,Yes,Yes,No,Grey Membrane covering throat and tonsils,6,Female,Normal,Normal,Positive
+Asthma,No,No,No,Yes,No,No,65,Female,Low,High,Negative
+Brain Tumor,No,No,No,No,Yes,Headaches Pain Severe/Blurred Vision/Limbs weak,95,Male,Low,High,Positive
+Malaria,Yes,No,No,No,No,No,13,Male,Normal,Normal,Negative
+Conjunctivits,No,Yes,No,No,No,"Redness,Itchiness,Puffy eyes",10,Female,Normal,Normal,Positive
+Spina Bifida,No,No,No,No,No,No,78,Female,High,High,Negative
+Psoariasis,Yes,No,No,Yes,No,Joint Pain,89,Male,High,Low,Positive
+Influenza,Yes,No,No,No,No,Diarrhea and Vomitng,14,Male,Normal,Normal,Positive
+Migrane,Yes,No,No,No,No,Headaches/Light and Sound Sensitive,44,Female,Low,Low,Positive
+Diabetes,Yes,No,Yes,No,No,Increased Thirst and Frequent Urination,27,Female,Low,Low,Positive
+ChickenPox,Yes,No,Yes,No,Yes,Raised Bumps(Papules),5,Male,High,Normal,Positive
+MoneyPox,Yes,Yes,Yes,Yes,Yes,Raised Bumps(Papules),4,Female,Normal,Normal,Positive
+Dengue,Yes,Yes,Yes,No,Yes,Mild Bleeding(Mouth/Nose),12,Female,Normal,Normal,Positive
+Pneumonia,Yes,Yes,Yes,Yes,Yes,Cough with Mucus,48,Male,High,High,Positive
+Hepatitis,Yes,No,Yes,No,Yes,Loss of Appetite/Diarrhea and Vomiting,20,Female,Normal,Low,Positive
+Diptheria,Yes,Yes,Yes,Yes,No,Grey Membrane covering throat and tonsils,3,Female,Normal,Normal,Positive
+Asthma,No,Yes,No,Yes,No,Chest Tightness,53,Female,High,Low,Negative
+Brain Tumor,No,No,No,No,Yes,Headaches Pain Severe/Blurred Vision/Limbs weak,87,Male,Low,High,Positive
+Malaria,Yes,Yes,Yes,Yes,Yes,Diarrhea and Vomiting/Nausea,32,Female,Normal,High,Negative
+Conjunctivits,No,Yes,No,No,No,"Redness,Itchiness,Puffy eyes",12,Male,Normal,Normal,Positive
+Spina Bifida,No,No,No,No,No,Not Develop Spinal Cord Properly,2,Male,Normal,Normal,Positive
+Psoariasis,No,No,No,No,Yes,Joint Pain,49,Male,Normal,Normal,Negative
+Covid19,Yes,Yes,Yes,Yes,Yes,Loss of smell and taste,78,Female,High,High,Positive
+Migrane,No,Yes,No,No,Yes,Headaches/Light and Sound Sensitive,40,Male,Normal,Normal,Negative
+Influenza,Yes,Yes,Yes,Yes,Yes,Diarrhea and Vomiting,65,Male,Normal,Normal,Negative
+Spina Bifida,No,No,No,No,No,Joint Pain,67,Male,High,High,Negative
+Psoariasis,No,No,No,No,Yes,Joint Pain,50,Female,High,Low,Positive
+Diabetes,Yes,No,Yes,No,No,Increased Thirst and Frequent Urination,48,Female,Normal,Low,Positive
+Influenza,Yes,Yes,Yes,No,No,Vomiting,45,Female,Low,Low,Negative
+Migrane,Yes,Yes,No,No,No,Headaches/Light and Sound Sensitive,19,Female,Normal,Normal,Negative
+Diabetes,No,No,Yes,No,No,Increased Thirst and Frequent Urination,34,Male,High,Normal,Positive
+ChickenPox,Yes,No,Yes,No,Yes,No,23,Female,Normal,Normal,Negative
+MoneyPox,Yes,No,Yes,No,Yes,Raised Bumps(Papules),28,Male,Normal,High,Positive
+Dengue,Yes,Yes,Yes,No,Yes,Mild Bleeding(Mouth/Nose),34,Male,High,High,Positive
+Pnemonia,Yes,Yes,Yes,Yes,No,Cough with Mucus,56,Female,Normal,Low,Positive
+Hepatitis,Yes,No,Yes,No,Yes,Loss of Appetite/Diarrhea and Vomiting,13,Female,Normal,Normal,Negative
+Diptheria,Yes,Yes,Yes,Yes,No,Grey Membrane covering throat and tonsils,67,Male,High,Low,Positive
+Asthma,Yes,Yes,No,Yes,No,Chest Tightness,76,Female,Low,Low,Positive
+Brain Tumor,No,No,No,No,No,Headaches Pain Severe/Blurred Vision/Limbs weak,30,Female,Low,High,Positive
+Malaria,Yes,Yes,No,Yes,Yes,Diarrhea and Vomiting/Nausea,28,Male,Normal,Normal,Negative
+Conjunctivits,No ,No ,No,No,Yes,"Redness,Itchiness,Puffy eyes",67,Male,Normal,High,Positive
+Covid19,Yes,Yes,Yes,Yes,Yes,Loss of smell and taste,53,Female,High,Normal,Positive
+Spina Bifida,Yes,No,No,No,No,Not Develop Spinal Cord Properly,7,Female,Normal,Normal,Positive
+Psoariasis,No,No,No,No,Yes,Joint Pain,45,Female,High,High,Negative
+Asthma,No,No,No,Yes,No,Chest Tightness,82,Male,Normal,Low,Positive
+Brain Tumor,No,No,No,No,Yes,Headaches Pain Severe/Blurred Vision/Limbs weak,54,Female,Normal,Low,Positive
+Malaria,Yes,No,No,No,Yes,Diarrhea and Vomiting/Nausea,17,Female,High,Normal,Positive
+Conjunctivits,No,No,No,No,No,"Redness,Itchiness,Puffy eyes",21,Male,Normal,Normal,Positive
+Spina Bifida,No,No,No,No,No,Not Develop Spinal Cord Properly,10,Female,Normal,Normal,Negative
+Migrane,Yes,No,Yes,No,Yes,No,35,Female,Low,Low,Negative
+Influenza,Yes,Yes,Yes,Yes,Yes,Diarrhea and Vomiting,34,Female,Normal,Normal,Positive
+Spina Bifida,No,No,No,No,No,Not Develop Spinal Cord Properly,10,Male,Normal,Normal,Positive
+Pnemonia,No,Yes,Yes,Yes,No,Cough with Mucus,65,Male,High,High,Negative
+Hepatitis,Yes,No,No,No,Yes,Loss of Appetite/Diarrhea and Vomiting,79,Female,Normal,Low,Negative
+Diptheria,Yes,Yes,Yes,Yes,No,Grey Membrane covering throat and tonsils,49,Male,High,Normal,Negative
+Asthma,No,Yes,No,Yes,No,Chest Tightness,68,Male,High,Normal,Positive
+Brain Tumor,No,No,No,No,No,Headaches Pain Severe/Blurred Vision/Limbs weak,89,Male,Low,Low,Positive
+Malaria,Yes,Yes,No,Yes,Yes,Diarrhea and Vomiting/Nausea,67,Male,Low,High,Negative
+Conjunctivits,Yes,No,No,No,Yes,"Redness,Itchiness,Puffy eyes",56,Female,Low,High,Negative
+Spina Bifida,No,No,No,No,No,Not Develop Spinal Cord Properly,2,Female,Normal,Normal,Positive
+Psoariasis,No,No,No,No,Yes,Joint Pain,45,Male,Low,Normal,Positive
+Asthma,No,No,No,Yes,No,No,65,Female,Normal,High,Negative
+Covid19,Yes,No,Yes,Yes,Yes,Loss of smell and taste,34,Female,High,High,Positive
+Influenza,Yes,Yes,Yes,Yes,Yes,Diarrhea and Vomiting,26,Male,Normal,Normal,Positive
+Migrane,No,Yes,No,No,No,Headaches/Light and Sound Sensitive,30,Female,Normal,Normal,Psitive
+Diabetes,Yes,No,Yes,No,No,Increased Thirst and Frequent Urination,50,Female,Low,Low,Positive
+ChickenPox,Yes,No,Yes,No,Yes,Raised Bumps(Papules),15,Male,High,Normal,Positive
+MoneyPox,Yes,Yes,Yes,Yes,Yes,Raised Bumps(Papules),7,Male,Normal,Normal,Positive
+Dengue,Yes,Yes,Yes,No,Yes,Mild Bleeding(Mouth/Nose),12,Male,Normal,Normal,Positive
+Pneumonia,Yes,Yes,Yes,Yes,Yes,Cough with Mucus,65,Female,High,High,Positive
+Hepatitis,Yes,No,Yes,No,Yes,Loss of Appetite/Diarrhea and Vomiting,30,Male,Normal,Low,Positive
+Diptheria,Yes,Yes,Yes,Yes,No,Grey Membrane covering throat and tonsils,3,Male,Normal,Normal,Positive
+Asthma,No,Yes,No,Yes,No,Chest Tightness,53,Female,High,Low,Negative
+Brain Tumor,No,No,No,No,Yes,Headaches Pain Severe/Blurred Vision/Limbs weak,67,Female,Low,High,Positive
+Malaria,Yes,Yes,Yes,Yes,Yes,Diarrhea and Vomiting/Nausea,32,Male,Normal,High,Negative
