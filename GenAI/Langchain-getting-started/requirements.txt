@@ -1,0 +1,16 @@
+transformers
+tensorflow
+sentence-transformers
+accelerate
+huggingface_hub
+langchain
+faiss-cpu
+python-dotenv
+ipykernel
+scikit-learn
+tensorboard
+nltk
+notebook
+sentencepiece
+jupyter
+ipywidgets
