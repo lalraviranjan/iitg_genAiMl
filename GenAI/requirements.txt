@@ -14,3 +14,13 @@ notebook
 sentencepiece
 jupyter
 ipywidgets
+python-dotenv
+langchainhub
+langchain-community
+langsmith
+langchain_core
+pypdf
+beautifulsoup4
+arxiv
+pymupdf
+wikipedia
