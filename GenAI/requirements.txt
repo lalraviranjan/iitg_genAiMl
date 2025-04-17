@@ -27,3 +27,7 @@ wikipedia
 langchain-text-splitters
 langchain_openai
 chromadb
+jupyter-contrib-nbextensions
+sentence_transformers
+langchain_huggingface
+tf-keras
