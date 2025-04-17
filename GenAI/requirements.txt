@@ -24,3 +24,6 @@ beautifulsoup4
 arxiv
 pymupdf
 wikipedia
+langchain-text-splitters
+langchain_openai
+chromadb
