@@ -31,3 +31,5 @@ jupyter-contrib-nbextensions
 sentence_transformers
 langchain_huggingface
 tf-keras
+faiss-cpu
+langchain-ollama
