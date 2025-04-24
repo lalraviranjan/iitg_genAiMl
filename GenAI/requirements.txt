@@ -39,3 +39,4 @@ langchain_groq
 langserve[serve]
 uvicorn
 sse_starlette
+langchain-chroma
