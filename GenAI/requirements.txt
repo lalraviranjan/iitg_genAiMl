@@ -40,3 +40,4 @@ langserve[serve]
 uvicorn
 sse_starlette
 langchain-chroma
+duckduckgo-search
