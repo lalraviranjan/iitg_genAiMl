@@ -41,3 +41,11 @@ uvicorn
 sse_starlette
 langchain-chroma
 duckduckgo-search
+# graphdb
+langchain-neo4j
+neo4j
+#Finetuning
+torch
+datasets
+peft
+bitsandbytes
