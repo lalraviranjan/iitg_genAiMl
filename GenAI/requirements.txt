@@ -41,11 +41,15 @@ uvicorn
 sse_starlette
 langchain-chroma
 duckduckgo-search
-# graphdb
+# graphdb requirements  
 langchain-neo4j
 neo4j
-#Finetuning
+#Finetuning requirements
 torch
 datasets
 peft
 bitsandbytes
+# video summrization requirements
+validators
+youtube-transcript-api
+unstructured
