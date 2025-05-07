@@ -53,3 +53,5 @@ bitsandbytes
 validators
 youtube-transcript-api
 unstructured
+# llmmathchain requirement
+numexpr
