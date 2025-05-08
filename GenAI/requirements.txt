@@ -38,7 +38,7 @@ groq
 langchain_groq
 langserve[serve]
 uvicorn
-sse_starlette
+sse_starlette # this is used for the streaming in the langserve
 langchain-chroma
 duckduckgo-search
 # graphdb requirements  
@@ -47,11 +47,15 @@ neo4j
 #Finetuning requirements
 torch
 datasets
-peft
+peft # this is for the finetuning to work
 bitsandbytes
 # video summrization requirements
-validators
+validators # this is streamlit validation
 youtube-transcript-api
-unstructured
+unstructured # this is for the video summarization to work
 # llmmathchain requirement
-numexpr
+numexpr # this is for the math chain to work
+# astradb pdf rag requirements
+cassio # this is for cassandra db
+cassandra-driver[uvloop]
+tiktoken # this is for openai embeddings, this helps in reducing the token count as we use the embeddings in the retriever and then pass it to the LLM chain.
