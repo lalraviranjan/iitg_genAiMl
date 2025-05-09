@@ -30,3 +30,5 @@ uvicorn
 langchain-chroma
 datasets
 PyPDF2 # this is for pdf reading
+# quickly build and share user interfaces (UIs) for machine learning models
+gradio
