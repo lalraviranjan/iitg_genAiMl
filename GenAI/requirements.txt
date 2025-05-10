@@ -59,3 +59,8 @@ numexpr # this is for the math chain to work
 cassio # this is for cassandra db
 cassandra-driver[uvloop]
 tiktoken # this is for openai embeddings, this helps in reducing the token count as we use the embeddings in the retriever and then pass it to the LLM chain.
+# pinecone and hybrid search rag
+pinecone
+pinecone-client
+pinecone-text
+pinecone-notebooks

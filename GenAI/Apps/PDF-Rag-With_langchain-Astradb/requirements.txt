@@ -32,3 +32,8 @@ datasets
 PyPDF2 # this is for pdf reading
 # quickly build and share user interfaces (UIs) for machine learning models
 gradio
+# pinecone and hybrid search rag
+pinecone
+pinecone-client
+pinecone-text
+pinecone-notebooks
