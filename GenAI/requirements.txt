@@ -64,3 +64,5 @@ pinecone
 pinecone-client
 pinecone-text
 pinecone-notebooks
+#redis db for history with session id
+redis
