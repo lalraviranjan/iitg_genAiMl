@@ -66,3 +66,5 @@ pinecone-text
 pinecone-notebooks
 #redis db for history with session id
 redis
+pdfplumber #for tabular data extraction
+tabulate #pandas Dataframe to markdown
