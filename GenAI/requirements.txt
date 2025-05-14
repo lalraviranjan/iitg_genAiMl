@@ -68,3 +68,6 @@ pinecone-notebooks
 redis
 pdfplumber #for tabular data extraction
 tabulate #pandas Dataframe to markdown
+langchain-huggingface
+langchain-openai
+python-docx
