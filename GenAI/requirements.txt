@@ -71,3 +71,4 @@ tabulate #pandas Dataframe to markdown
 langchain-huggingface
 langchain-openai
 python-docx
+python-multipart #for file handling
