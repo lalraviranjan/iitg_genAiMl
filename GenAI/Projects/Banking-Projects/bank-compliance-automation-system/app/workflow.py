@@ -32,7 +32,7 @@ def run_workflow(file_path: str, unique_id: str) -> str:
         input_variables=["uploaded_clause", "match_1", "match_2"],
         template="""
         You are a compliance assistant. Analyze if the following uploaded clause complies with regulations.
-
+        Add the short summary in not more than 50 words, of the uploaded clause highlighting the important clauses in pointers in Uploaded Clause.
         Uploaded Clause:
         "{uploaded_clause}"
 
@@ -42,7 +42,8 @@ def run_workflow(file_path: str, unique_id: str) -> str:
 
         Think step-by-step:
         - Compare the uploaded clause with the regulations
-        - Highlight similarities/differences
+        - Highlight similarities/differences and identify if the uploaded clause is compliant
+        - Summarize and Mention in points wherever applicable in not more than 50 words
         - Return only a structured JSON:
         
         {{"compliant": true/false, "reasoning": "..."}}
