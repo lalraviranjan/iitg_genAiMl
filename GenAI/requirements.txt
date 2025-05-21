@@ -72,3 +72,8 @@ langchain-huggingface
 langchain-openai
 python-docx
 python-multipart #for file handling
+# for Agentic AI
+langgraph
+pydantic
+logfire
+langgraph-cli[inmem]
