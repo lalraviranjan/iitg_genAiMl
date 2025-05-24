@@ -2,11 +2,7 @@
 
 ## Overview
 
-This repository contains a collection of Python fundamental concepts and advanced projects focusing on Generative AI (GenAI) and Machine Learning (ML). It serves as a comprehensive guide for beginners and experienced developers alike who are looking to enhance their skills in Python and explore the exciting fields of AI and ML.
-
-## Contents
-
-Here’s an updated, clearer, and more professional version of your **`## Contents`** section, organized and formatted for a high-quality GitHub project README:
+This repository contains a collection of Python fundamental concepts and advanced projects focusing on Generative AI (GenAI) and Machine Learning (ML) and Agentic AI Workflows. It serves as a comprehensive guide for beginners and experienced developers alike who are looking to enhance their skills in Python and explore the exciting fields of AI and ML.
 
 ---
 
