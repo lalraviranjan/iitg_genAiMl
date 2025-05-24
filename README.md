@@ -1,4 +1,4 @@
-# Python Fundamentals and Advanced Projects on GenAI and Machine Learning
+# Advanced AI Engineering: From Data Science, ML, GenAI to Agentic Systems
 
 ## Overview
 
