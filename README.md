@@ -1,22 +1,33 @@
-# Python Fundamentals and Advanced Projects on GenAI and Machine Learning
+# Advanced AI Engineering: From Data Science, ML, GenAI to Agentic Systems
 
 ## Overview
 
-This repository contains a collection of Python fundamental concepts and advanced projects focusing on Generative AI (GenAI) and Machine Learning (ML). It serves as a comprehensive guide for beginners and experienced developers alike who are looking to enhance their skills in Python and explore the exciting fields of AI and ML.
+This repository contains a collection of Python fundamental concepts and advanced projects focusing on Generative AI (GenAI) and Machine Learning (ML) and Agentic AI Workflows. It serves as a comprehensive guide for beginners and experienced developers alike who are looking to enhance their skills in Python and explore the exciting fields of AI and ML.
+
+---
 
 ## Contents
 
-- **Fundamentals**: 
-  - Basic Python syntax and data structures
-  - Control flow and functions
-  - Object-oriented programming concepts
-  - File handling and data manipulation
+### Fundamentals
 
-- **Advanced Projects**:
-  - Implementations of various Generative AI models
-  - Machine Learning algorithms and applications
-  - Data preprocessing and feature engineering techniques
-  - Model evaluation and optimization
+* Core Python syntax and data structures
+* Control flow (loops, conditionals) and function design
+* Object-Oriented Programming (OOP) principles
+* File I/O operations and basic data manipulation
+
+### Advanced Projects
+
+* Hands-on projects with Generative AI models.
+* Implementation of key Machine Learning algorithms (classification, regression, clustering)
+* Feature engineering, data preprocessing, and transformation pipelines
+* Model evaluation, hyperparameter tuning, and performance optimization
+
+### Agentic AI Systems
+
+* Designing intelligent agents with LangGraph and memory-backed workflows
+* Human-in-the-loop architecture using `interrupt_before` and stateful graphs
+* Creating parallel worker agents to write, plan, or analyze with LLMs
+* Implementing RAG pipelines with dynamic context retrieval and agent orchestration
 
 ## Getting Started
 
