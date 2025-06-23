@@ -77,3 +77,6 @@ langgraph
 pydantic
 logfire
 langgraph-cli[inmem]
+# MCP server
+mcp
+fastmcp
