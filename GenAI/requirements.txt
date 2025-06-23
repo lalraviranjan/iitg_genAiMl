@@ -80,3 +80,4 @@ langgraph-cli[inmem]
 # MCP server
 mcp
 fastmcp
+PyGithub

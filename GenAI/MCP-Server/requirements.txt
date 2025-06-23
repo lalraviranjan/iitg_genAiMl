@@ -1,0 +1,27 @@
+huggingface_hub
+langchain
+python-dotenv
+ipykernel   
+scikit-learn
+notebook
+jupyter
+ipywidgets
+python-dotenv
+langchainhub
+langchain-community
+langsmith
+langchain_core
+langchain-text-splitters
+langchain_openai
+jupyter-contrib-nbextensions
+langchain_huggingface
+groq
+langchain_groq
+langserve[serve]
+uvicorn
+langchain-huggingface
+langchain-openai
+# MCP server
+mcp
+fastmcp
+PyGithub
