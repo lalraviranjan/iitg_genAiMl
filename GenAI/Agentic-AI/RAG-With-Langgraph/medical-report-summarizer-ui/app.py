@@ -4,6 +4,7 @@ import time
 import os
 import re
 import pdfplumber
+import json
 from dotenv import load_dotenv
 
 from typing import List
@@ -233,6 +234,7 @@ Task:
 - Generate a clear, patient-friendly medical report summary.
 - Combine simplified medical terms and analytical insights.
 - Help the patient understand the report without causing anxiety.
+- You can use the medical numbers in the report while explaining the condition
 
 Tone & Safety Rules:
 - Be calm, reassuring, and supportive.
@@ -240,7 +242,7 @@ Tone & Safety Rules:
 - Do NOT diagnose or predict outcomes.
 - Encourage consulting a healthcare professional where appropriate.
 - If information is outside the provided medical report, clearly state that.
-- Do NOT exceed 180 words.
+- Explain in atleast 350 words and do NOT exceed 450 words.
 
 Simplified Medical Terms:
 {state['mtn_output']}
@@ -292,11 +294,19 @@ def stream_output(text):
     placeholder = st.empty()
     output = ""
 
-    for word in text.split():
-        output += word + " "
-        placeholder.markdown(output)
-        time.sleep(0.02)
+    # ✅ Split by lines instead of words
+    lines = text.split("\n")
 
+    for line in lines:
+        output += line + "\n"
+
+        placeholder.markdown(
+            output,
+            unsafe_allow_html=False  # ✅ allows markdown (**bold**, lists)
+        )
+
+        time.sleep(0.1)  # adjust speed if needed
+        
 # -----------------------------
 # UI FLOW
 # -----------------------------
@@ -335,8 +345,12 @@ if uploaded_file:
             "condition_output": "",
             "patient_summary": ""
         })
+        # Save result as JSON
+        with open("patient_summary.json", "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=4, ensure_ascii=False)
 
     st.subheader("📋 Final Patient Summary")
-    stream_output(result.get("patient_summary", ""))
+    st.divider()
+    stream_output(result["patient_summary"])
 
     os.remove(temp_path)
