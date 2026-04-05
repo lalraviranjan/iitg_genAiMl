@@ -316,41 +316,135 @@ if uploaded_file:
 
     st.success("✅ File uploaded successfully")
 
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
-        tmp.write(uploaded_file.read())
-        temp_path = tmp.name
+    # -----------------------------
+    # INIT STATE
+    # -----------------------------
+    if "processed" not in st.session_state:
+        st.session_state.processed = False
 
-    with st.spinner("⚙️ Processing your report..."):
+    if "result" not in st.session_state:
+        st.session_state.result = None
 
-        st.write("📖 Reading PDF...")
-        docs = load_medical_pdf(temp_path)
+    # -----------------------------
+    # RUN PIPELINE ONLY ONCE
+    # -----------------------------
+    if not st.session_state.processed:
 
-        docs = docs[:20]
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+            tmp.write(uploaded_file.read())
+            temp_path = tmp.name
 
-        st.write("🧹 Cleaning report...")
-        text = "\n\n".join([doc.page_content for doc in docs])
-        text = text[:8000]
+        with st.spinner("⚙️ Processing your report..."):
 
-        cleaned = clean_patient_report(text)
+            st.write("📖 Reading PDF...")
+            docs = load_medical_pdf(temp_path)
+            docs = docs[:20]
 
-        st.write("🔗 Building AI workflow...")
-        graph = get_graph()
+            st.write("🧹 Cleaning report...")
+            text = "\n\n".join([doc.page_content for doc in docs])
+            text = text[:8000]
 
-        st.write("🚀 Running AI Agents...")
+            cleaned = clean_patient_report(text)
 
-        result = graph.invoke({
-            "patient_report": cleaned,
-            "retrieved_docs": [],
-            "mtn_output": "",
-            "condition_output": "",
-            "patient_summary": ""
-        })
-        # Save result as JSON
-        with open("patient_summary.json", "w", encoding="utf-8") as f:
-            json.dump(result, f, indent=4, ensure_ascii=False)
+            st.write("🔗 Building AI workflow...")
+            graph = get_graph()
 
-    st.subheader("📋 Final Patient Summary")
-    st.divider()
-    stream_output(result["patient_summary"])
+            st.write("🚀 Running AI Agents...")
 
-    os.remove(temp_path)
+            result = graph.invoke({
+                "patient_report": cleaned,
+                "retrieved_docs": [],
+                "mtn_output": "",
+                "condition_output": "",
+                "patient_summary": ""
+            })
+
+            # ✅ STORE RESULT
+            st.session_state.result = result
+            st.session_state.processed = True
+
+            # Save JSON
+            import json
+            with open("patient_summary.json", "w", encoding="utf-8") as f:
+                json.dump(result, f, indent=4, ensure_ascii=False)
+
+        os.remove(temp_path)
+
+    # -----------------------------
+    # DISPLAY RESULT
+    # -----------------------------
+    result = st.session_state.result
+
+    if result:
+        st.subheader("📋 Final Patient Summary")
+        st.divider()
+        stream_output(result["patient_summary"])
+
+        st.divider()
+
+        # -----------------------------
+        # FEEDBACK STATE
+        # -----------------------------
+
+        # -----------------------------
+        # INIT STATE
+        # -----------------------------
+        if "feedback" not in st.session_state:
+            st.session_state.feedback = None
+
+        if "show_textarea" not in st.session_state:
+            st.session_state.show_textarea = False
+
+        if "submitted" not in st.session_state:
+            st.session_state.submitted = False
+
+        # -----------------------------
+        # BUTTONS
+        # -----------------------------
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            if st.button("👍"):
+                st.session_state.feedback = "liked"
+
+        with col2:
+            if st.button("👎"):
+                st.session_state.feedback = "disliked"
+
+        with col3:
+            if st.button("Raise a Concern"):
+                st.session_state.show_textarea = True
+
+        # -----------------------------
+        # SHOW FEEDBACK RESULT
+        # -----------------------------
+        if st.session_state.feedback == "liked":
+            st.success("You liked the summary")
+
+        elif st.session_state.feedback == "disliked":
+            st.warning("You didn’t like the summary")
+
+        # -----------------------------
+        # TEXTAREA FLOW
+        # -----------------------------
+        if st.session_state.show_textarea:
+
+            feedback_text = st.text_area("Enter your concern")
+
+            col_a, col_b = st.columns(2)
+
+            with col_a:
+                if st.button("Submit"):
+                    st.session_state.submitted = True
+                    st.session_state.show_textarea = False
+
+            with col_b:
+                if st.button("Cancel"):
+                    st.session_state.show_textarea = False
+
+        # -----------------------------
+        # SUBMIT MESSAGE
+        # -----------------------------
+        if st.session_state.submitted:
+            st.success("Feedback submitted")
+    
