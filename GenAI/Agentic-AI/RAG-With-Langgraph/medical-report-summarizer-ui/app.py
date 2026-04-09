@@ -120,7 +120,7 @@ class State(TypedDict):
     patient_summary: str
 
 # -----------------------------
-# AGENTS (PROMPTS UNCHANGED)
+# AGENTS
 # -----------------------------
 def retrieve(state: State) -> State:
     st.info("🔍 Retrieving relevant medical context...")
@@ -249,11 +249,6 @@ Simplified Medical Terms:
 
 Medical Analysis & Context:
 {state['condition_output']}
-
-Final Output:
-- Patient-friendly explanation
-- What the results generally indicate
-- Gentle next steps (non-prescriptive)
 """
 
         response = llm.invoke(prompt)
@@ -265,7 +260,6 @@ Final Output:
     except Exception as e:
         st.error(f"Summary error: {e}")
         return {"patient_summary": ""}
-
 
 # -----------------------------
 # GRAPH
@@ -294,40 +288,41 @@ def stream_output(text):
     placeholder = st.empty()
     output = ""
 
-    # ✅ Split by lines instead of words
     lines = text.split("\n")
 
     for line in lines:
         output += line + "\n"
 
-        placeholder.markdown(
-            output,
-            unsafe_allow_html=False  # ✅ allows markdown (**bold**, lists)
-        )
+        placeholder.markdown(output, unsafe_allow_html=False)
+        time.sleep(0.1)
 
-        time.sleep(0.1)  # adjust speed if needed
-        
 # -----------------------------
 # UI FLOW
 # -----------------------------
 uploaded_file = st.file_uploader("📄 Upload Medical Report", type=["pdf"])
 
+# ✅ FIX: detect new file & reset state
+if uploaded_file is not None:
+    file_id = uploaded_file.name + str(uploaded_file.size)
+
+    if "last_uploaded_file" not in st.session_state:
+        st.session_state.last_uploaded_file = file_id
+
+    if st.session_state.last_uploaded_file != file_id:
+        st.session_state.processed = False
+        st.session_state.result = None
+        st.session_state.last_uploaded_file = file_id
+
 if uploaded_file:
 
     st.success("✅ File uploaded successfully")
 
-    # -----------------------------
-    # INIT STATE
-    # -----------------------------
     if "processed" not in st.session_state:
         st.session_state.processed = False
 
     if "result" not in st.session_state:
         st.session_state.result = None
 
-    # -----------------------------
-    # RUN PIPELINE ONLY ONCE
-    # -----------------------------
     if not st.session_state.processed:
 
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
@@ -359,20 +354,14 @@ if uploaded_file:
                 "patient_summary": ""
             })
 
-            # ✅ STORE RESULT
             st.session_state.result = result
             st.session_state.processed = True
 
-            # Save JSON
-            import json
             with open("patient_summary.json", "w", encoding="utf-8") as f:
                 json.dump(result, f, indent=4, ensure_ascii=False)
 
         os.remove(temp_path)
 
-    # -----------------------------
-    # DISPLAY RESULT
-    # -----------------------------
     result = st.session_state.result
 
     if result:
@@ -382,13 +371,6 @@ if uploaded_file:
 
         st.divider()
 
-        # -----------------------------
-        # FEEDBACK STATE
-        # -----------------------------
-
-        # -----------------------------
-        # INIT STATE
-        # -----------------------------
         if "feedback" not in st.session_state:
             st.session_state.feedback = None
 
@@ -398,9 +380,6 @@ if uploaded_file:
         if "submitted" not in st.session_state:
             st.session_state.submitted = False
 
-        # -----------------------------
-        # BUTTONS
-        # -----------------------------
         col1, col2, col3 = st.columns(3)
 
         with col1:
@@ -415,18 +394,12 @@ if uploaded_file:
             if st.button("Raise a Concern"):
                 st.session_state.show_textarea = True
 
-        # -----------------------------
-        # SHOW FEEDBACK RESULT
-        # -----------------------------
         if st.session_state.feedback == "liked":
             st.success("You liked the summary")
 
         elif st.session_state.feedback == "disliked":
             st.warning("You didn’t like the summary")
 
-        # -----------------------------
-        # TEXTAREA FLOW
-        # -----------------------------
         if st.session_state.show_textarea:
 
             feedback_text = st.text_area("Enter your concern")
@@ -442,9 +415,5 @@ if uploaded_file:
                 if st.button("Cancel"):
                     st.session_state.show_textarea = False
 
-        # -----------------------------
-        # SUBMIT MESSAGE
-        # -----------------------------
         if st.session_state.submitted:
             st.success("Feedback submitted")
-    
